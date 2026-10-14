@@ -130,7 +130,7 @@ For every revision:
 5. Re-score from scratch rather than carrying forward the previous score.
 6. Compare the new candidate against the previous best at small sizes and in grayscale.
 
-Use up to eight purposeful review/refinement cycles per deliverable, or stop earlier only when the five-star target is met. If all scores are not 5/5 after eight cycles or generation limitations prevent more iterations, do not pretend otherwise: deliver the strongest candidate, list the remaining limitation, and identify the next meaningful experiment. Avoid meaningless regenerate-only loops.
+Continue purposeful review/refinement cycles while each cycle has a concrete hypothesis, can plausibly improve a scored weakness, and the tools permit the work. Stop when the five-star quality gate is met on verified evidence, or when a real limitation prevents further useful validation. Never use an arbitrary cycle count to declare success; never loop without a meaningful change. If constraints prevent the gate from being met, state the remaining limitation and the next useful test instead of pretending the result is perfect.
 
 ### 8. Pre-delivery checklist
 - [ ] One logo/icon; no collage or multiple alternatives in the final image.
