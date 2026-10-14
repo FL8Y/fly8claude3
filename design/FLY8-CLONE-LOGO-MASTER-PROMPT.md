@@ -82,6 +82,18 @@ If upstream search is not available, do not claim that the scripts returned a st
 
 ---
 
+### Current concept decision for this brief
+
+Three directions were compared against product fit, ownability, small-size silhouette, and risk of category confusion:
+
+- **A — Forked aperture / echo iris:** strongest connection to the inspiration image, but highest risk of reading as a camera or biometric scanner.
+- **B — Forked-core / dual-channel mark:** one custom core branches into two offset, independently readable paths. It signals one-to-two instances without relying on literal windows and has the best balance of reference continuity and professional restraint.
+- **C — F/8-inspired abstract monogram:** potentially ownable to the FLY8 name, but risks reading as an infinity loop or making the logo depend on letter recognition.
+
+**Selected for generation: B — forked-core / dual-channel.** Keep an aperture-like hint only if the negative space naturally helps. If the candidate still looks like a camera, scanner, infinity glyph, or generic tech symbol, reject the concept rather than decorating it. This is a design judgment, not a claim of user-tested market uniqueness.
+
+---
+
 ## 4. Selected visual language
 
 ### Recommended type
@@ -123,15 +135,7 @@ Create one icon only. No grid, no multi-logo sheet, no device mockup, no labels,
 
 
 
-### Concept exploration decision before generation
 
-Three directions were compared against product fit, ownability, small-size silhouette, and risk of category confusion:
-
-- **A — Forked aperture / echo iris:** strongest connection to the inspiration image, but highest risk of reading as a camera or biometric scanner.
-- **B — Forked-core / dual-channel mark:** one custom core branches into two offset, independently readable paths. It signals one-to-two instances without relying on literal windows and has the best balance of reference continuity and professional restraint.
-- **C — F/8-inspired abstract monogram:** potentially ownable to the FLY8 name, but risks reading as an infinity loop or making the logo depend on letter recognition.
-
-**Selected for generation: B — forked-core / dual-channel.** Keep an aperture-like hint only if the negative space naturally helps. If the candidate still looks like a camera, scanner, infinity glyph, or generic tech symbol, reject the concept rather than decorating it. This is a design judgment, not a claim of user-tested market uniqueness.
 
 ## 5. Canonical master prompt for the image model
 
@@ -665,6 +669,7 @@ If this preflight cannot be completed, pause and resolve the missing information
 
 - **v2 supplement — 2026-10-15:** Added upstream source inventory; concept-selection gate; calibrated score anchors; critical gates; explicit evidence labels; simulated-versus-independent council distinction; four-pass critique protocol; candidate ledger; practical downscale/grayscale/mask checks; two-pass literal prompt audit; and honest acceptance policy.
 - The original brief, palette, canonical master prompt, rejected directions, and initial prompt verification log above remain in force unless explicitly revised with a documented reason.
+- **Coherence audit — 2026-10-15:** Moved the current concept decision before the visual-specification section so the reading order is brief → concept choice → visual execution → canonical prompt. The selected dual-channel route remains provisional and must still pass the later concept gate. The upstream CLI was read about but not executed.
 
 
 ---
