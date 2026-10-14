@@ -94,7 +94,7 @@ Write down product, user, use case, desired impression, symbol logic, palette, s
 
 ### Concept challenger gate (required for logos)
 
-Before locking a concept, compare at least three distinct routes and score product fit, ownability, silhouette, and small-size potential. The default forked-aperture/echo-iris concept is not sacred: challenge its camera/biometric cliché risk against a custom FLY8 split-core sigil and a parallel-path negative-space mark. If another route wins, rewrite the master prompt's geometry rather than forcing the aperture concept. Never combine all routes into one cluttered mark.
+Before locking a concept, compare at least three distinct routes and score product fit, ownability, silhouette, and small-size potential. The preferred forked-core/dual-channel concept is not sacred: challenge it against a custom FLY8 split-core sigil and a parallel-path negative-space mark. Do not default to an iris/camera construction. If another route wins, rewrite the master prompt's geometry rather than forcing the preferred concept. Never combine all routes into one cluttered mark.
 
 Before generation, run a completeness pass, cliché pass, contradiction pass, downscale pass, and skeptical usefulness pass. Record concise findings and resulting edits. Long prompts need useful constraints, not repeated adjectives.
 
