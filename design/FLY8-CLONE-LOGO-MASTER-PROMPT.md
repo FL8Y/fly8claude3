@@ -57,11 +57,11 @@ The icon should be identifiable as a coherent silhouette before a viewer notices
 The final product is not a wallpaper, poster, character illustration, UI screenshot, app-store banner, collage, or concept sheet. It is an icon whose composition is purposeful and whose visual complexity is earned.
 
 ### Central creative thesis
-Explore the idea of a **forked aperture / echo iris**: one deliberate lens-like core with a single contour that branches or echoes into a second independent path. The duplication is expressed by a controlled split, offset echo, or duplicated negative-space cut—not by stacking a pile of ordinary cards.
+Explore a **forked-core / dual-channel mark**: one compact, asymmetrical core whose continuous primary path intentionally divides into two offset, independently readable channels. The duplication is expressed by the geometry of one path becoming two distinct instance paths—not by stacking ordinary cards.
 
-The “eye” is an abstract geometric aperture, not a literal anime eye or a face. The central core can imply focus and identity; the echo/fork implies another instance. A slight asymmetry may make the mark recognizable and less template-like, provided it does not look accidental.
+A restrained aperture/iris hint may appear only as negative space within the core if it strengthens the mark; it must not dominate or make the icon read as a camera, biometric scanner, or generic eye. The central shape implies one identity; the deliberate fork/echo implies a separate instance. Favor original contour relationships, memorable proportions, and a slight controlled asymmetry over any familiar stock symbol.
 
-This is a strong starting concept, not a license to force bad geometry. If research or an adversarial design review shows that the aperture motif is too familiar, explore a different metaphor and document why it is more ownable before generating.
+This is a tested concept direction, not permission to force bad geometry. If the form feels like a camera, scanner, infinity sign, or generic tech logo, reject it and explore another metaphor before generating.
 
 ---
 
@@ -148,6 +148,18 @@ Create one icon only. No grid, no multi-logo sheet, no device mockup, no labels,
 
 ---
 
+
+
+### Concept exploration decision before generation
+
+Three directions were compared against product fit, ownability, small-size silhouette, and risk of category confusion:
+
+- **A — Forked aperture / echo iris:** strongest connection to the inspiration image, but highest risk of reading as a camera or biometric scanner.
+- **B — Forked-core / dual-channel mark:** one custom core branches into two offset, independently readable paths. It signals one-to-two instances without relying on literal windows and has the best balance of reference continuity and professional restraint.
+- **C — F/8-inspired abstract monogram:** potentially ownable to the FLY8 name, but risks reading as an infinity loop or making the logo depend on letter recognition.
+
+**Selected for generation: B — forked-core / dual-channel.** Keep an aperture-like hint only if the negative space naturally helps. If the candidate still looks like a camera, scanner, infinity glyph, or generic tech symbol, reject the concept rather than decorating it. This is a design judgment, not a claim of user-tested market uniqueness.
+
 ## 5. Canonical master prompt for the image model
 
 Use the following as the primary generation prompt. Do not shorten away its core shape, anti-generic constraints, output context, or small-size requirements.
@@ -164,9 +176,9 @@ Use the following as the primary generation prompt. Do not shorten away its core
 >
 > **ORIGINAL SYMBOL CONCEPT**
 >
-> Create a distinctive abstract pictorial mark based on a “forked aperture / echo iris.” Build one compact lens-like or aperture-like core from a confident, continuous primary form. Let one contour split, fork, or echo into a secondary path, implying that one original context yields a separate instance. Use a small, purposeful negative-space core or pupil to anchor the geometry. The echo should feel structurally integrated into the symbol, not like a second generic card pasted behind it.
+> Create a distinctive abstract pictorial mark based on a **forked-core / dual-channel** concept. Build one compact, asymmetrical core from a confident primary form. From that one core, one continuous path must deliberately separate into two offset, independently readable channels—an original path and a second instance path. This is the key visual idea: one context becoming two distinct instances. The fork/echo must be built into the main silhouette, not shown as a second generic card pasted behind it. Use a purposeful central negative space to anchor the geometry.
 >
-> Keep the symbol abstract: it may subtly evoke an iris, focus, parallel paths, or duplication, but must not become a literal eyeball, an anime eye, a face, a camera lens stock icon, an infinity symbol, or a simple stack of windows. Favor one ownable silhouette and one clear concept. Slight asymmetry is allowed if it materially improves distinction. Choose shape relationships that could be described and redrawn by a human designer rather than accidental swirls.
+> An aperture/iris hint is optional and may exist only as subtle negative space; it must not make the mark read primarily as a camera lens, eye-tracking tool, or biometric scanner. Keep the symbol abstract: no literal eyeball, anime eye, face, camera-lens glyph, infinity symbol, or simple stack of windows. Favor an ownable silhouette and original shape relationships that could be described and redrawn by a human designer. Slight asymmetry is welcome when it measurably improves distinction.
 >
 > The central idea must survive as a flat black silhouette. If the cyan color, shading, and tiny details were removed, viewers should still be able to distinguish the mark from a generic clone-app icon.
 >
