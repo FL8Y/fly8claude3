@@ -11,6 +11,7 @@ The skill is informed by the public [UI/UX Pro Max](https://github.com/nextlevel
 ## Canonical logo brief and prompt
 
 - [FLY8 Clone logo brief, generation prompt, scorecard, and critique protocol](design/FLY8-CLONE-LOGO-MASTER-PROMPT.md)
+- [Prompt QA, red-team council, and repeated verification log](design/FLY8-PROMPT-QA-COUNCIL.md)
 - [Project-wide instructions for coding/design agents](CLAUDE.md)
 
 ## Design intent
