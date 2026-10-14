@@ -67,3 +67,5 @@ Use only the colors that serve the concept. The master prompt and project skill 
 - Avoid conflicting duplicate standards; cross-link the two files when a workflow changes.
 - Do not copy the full upstream repository into this project merely to claim it is the baseline.
 - Do not expose private chain-of-thought. Persist concise decisions, observed evidence, test results, scores, and unresolved risks.
+
+3. Read `design/FLY8-PROMPT-QA-COUNCIL.md` before generating a logo; it is the separate prompt-quality gate, not an image scorecard.
