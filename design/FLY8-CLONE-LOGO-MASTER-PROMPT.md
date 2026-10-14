@@ -668,7 +668,7 @@ If this preflight cannot be completed, pause and resolve the missing information
 
 ---
 
-## 13. Post-write verification pass and council addendum
+## 23. Post-write verification pass and council addendum
 
 This section was added after the files were committed and fetched back from GitHub for verification.
 
@@ -730,7 +730,7 @@ This is a role-based adversarial review written into the project specification, 
 The prompt is ready for image generation. The artwork itself must still earn the rating.
 
 
-## 23. Asset separation and Android handoff
+## 24. Asset separation and Android handoff
 
 The white-canvas image is a presentation proof, not automatically a shippable launcher asset. When the runtime supports image editing/cropping, prepare a clean export pass after the concept has been accepted:
 
