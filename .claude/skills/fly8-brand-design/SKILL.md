@@ -149,3 +149,12 @@ Use up to eight purposeful review/refinement cycles per deliverable, or stop ear
 When asked to create an image, generate the image; don't replace it with a long explanation. After generation, provide only what the platform requires. In a design-planning or repository-editing task, show the brief/prompt, review findings, and file links.
 
 The user values original, polished, product-specific work and has explicitly rejected generic blue overlapping panels. Do not default back to that solution.
+
+
+## Extra production safeguards
+
+- Before committing to the forked-aperture idea, compare it with a custom forked-core/dual-channel mark and a restrained F/8-inspired negative-space mark. Do not keep an aperture if it reads primarily as a camera, eye-tracking tool, or biometric scanner.
+- A role-based critique council is not the same as independent human user testing or multiple independent model evaluations. Describe it accurately.
+- Image-model output is raster artwork unless a separate vector-production step creates an actual SVG. “Vector-like” describes visual style, not file format.
+- Do not claim 24/32/48 dp testing, grayscale export testing, adaptive-mask validation, or Android device testing unless those checks were actually performed. A conceptual review must be labelled as such.
+- A high aggregate rating cannot hide a critical failure in originality, product fit, silhouette, or small-size recognition.
