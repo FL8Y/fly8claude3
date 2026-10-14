@@ -95,6 +95,17 @@ Write down product, user, use case, desired impression, symbol logic, palette, s
 - Pick one direction and explain its trade-off in one or two sentences.
 - Use upstream style/color/industry search if available; otherwise do not fake it.
 
+
+### Concept challenger gate (required for logos)
+
+Before locking a concept, compare at least three distinct routes and score product fit, ownability, silhouette, and small-size potential. The default forked-aperture/echo-iris concept is not sacred: challenge its camera/biometric cliché risk against a custom FLY8 split-core sigil and a parallel-path negative-space mark. If another route wins, rewrite the master prompt's geometry rather than forcing the aperture concept. Never combine all routes into one cluttered mark.
+
+Before generation, run a completeness pass, cliché pass, contradiction pass, downscale pass, and skeptical usefulness pass. Record concise findings and resulting edits. Long prompts need useful constraints, not repeated adjectives.
+
+### Android asset handoff
+
+Treat the white-canvas composition as a presentation proof, not a launcher-ready asset. When tools allow, crop the dark tile, check multiple pixel sizes and adaptive masks, and prepare foreground/background layers only if they can be exported accurately. Never claim SVG, vector, adaptive-icon, or small-size testing unless those outputs or tests actually exist.
+
 ### 4. Create one focused image prompt
 - Specify one logo/icon only, centered, without wordmark unless explicitly requested.
 - State the internal icon tile/background, canvas/background, palette, silhouette, negative-space logic, shape hierarchy, edge treatment, and intended rendering style.
