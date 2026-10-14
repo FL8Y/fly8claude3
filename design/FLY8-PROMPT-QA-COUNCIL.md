@@ -277,3 +277,66 @@ The 12 prompt-quality dimensions in Section 3 remain rated 5/5 under this reposi
 - The upstream UI/UX Pro Max CLI/search scripts were not executed.
 - This review did not perform user research, trademark clearance, or independent human critique.
 - A generated image must be assessed separately with observed evidence. Actual 24/32/48 px renders, grayscale, one-color silhouette, adaptive-mask previews, and Android packaging remain unverified until those steps are carried out.
+
+
+## 11. Observed generation round — reject and reset the context
+
+**Review date:** 2026-10-15  
+**Status:** Three generated candidates reviewed at full size; all rejected. This is an image-stage finding, not a prompt-only score.
+
+### Candidate A — `a_high_detail_futuristic_cyber_tech_anime_style_ap.png`
+
+**Observed failures**
+- The anime eye and layered faux application windows dominate the composition.
+- Orbital ribbons, HUD fragments, bright flares, and decorative interface marks compete with the icon's primary silhouette.
+- The result reads as cyberpunk/anime artwork, not as a distinctive, clean Android cloning-app mark.
+- The central symbol is not a compact forked-core / dual-channel glyph.
+
+**Provisional review**
+- Product fit: 2/5.
+- Originality/ownability: 1/5; the eye + floating window composition is a familiar visual trope.
+- Instant recognition: 2/5; the eye is memorable but communicates a vision/AI theme more than separate app instances.
+- Silhouette: 1/5; multiple frames and ribbons merge into visual clutter.
+- Composition: 2/5.
+- Color discipline: 2/5; too many bright effects and secondary hues.
+- Professional logo finish: 2/5 for the intended use; surface rendering is elaborate, but the identity is not restrained or scalable.
+- Platform readiness: 1/5.
+- 24/32/48 dp legibility: **not tested**. Small-size performance is predicted to fail because too much meaning depends on fine detail, but that prediction is not a rendered-size test.
+
+### Candidate B — `a_polished_high_detail_stylized_app_icon_graphic.png`
+
+**Observed failures**
+- Repeats the same eye, multi-window, orbit, and HUD composition rather than testing the forked-core direction.
+- Glossy borders and stacked title bars create more competing contours.
+- At full size it is visually striking but far too dense for a launcher mark.
+
+**Decision:** Reject. This is not a meaningful iteration because it does not test the recorded design hypothesis or fix the prior candidate's top defects. No downscaled, grayscale, or mask preview was performed.
+
+### Candidate C — `close_up_stylized_cyberpunk_anime_app_icon_illust.png`
+
+**Observed failures**
+- The same anime eye, faux windows, HUD, orbiting rings, and digital fragments remain.
+- Large `FLY8` lettering was added despite the no-text requirement.
+- This version behaves like a gaming/streaming poster and does not satisfy the standalone-symbol requirement.
+
+**Decision:** Reject. Platform readiness is 1/5. The accidental wordmark is an additional critical failure. No small-size or adaptive-mask checks were performed.
+
+### Council summary
+
+| Lens | Finding | Required action |
+|---|---|---|
+| Brand strategist | The artwork communicates “AI vision/cyberpunk” more strongly than “separate app instances.” | Remove the character/eye as the focal subject; encode one-to-two instance logic in the actual primary silhouette. |
+| Identity designer | Decorative complexity masks the lack of an ownable mark. | Use one abstract continuous form and two legible negative-space channels; keep only one subordinate echo. |
+| Android launcher specialist | The frames, orbit lines, and micro-elements are unlikely to survive reduction. | Treat tiny-size performance as unverified until measured; design for broad shapes and safe margins first. |
+| Art director | White/cyan glows, purple accents, glass borders, and reflections have become the design rather than support for it. | Near-flat geometry, restricted FLY8 palette, no effect-driven silhouette. |
+| Adversarial end user | A fast glance suggests an anime AI scanner or a futuristic game app. | Reject candidates that need their caption to communicate cloning. |
+
+This is a **simulated multi-lens review** by one operator, not five independent reviewers or user research.
+
+### Generation-context correction for the next attempt
+
+The next attempt must be framed as a **new original icon**, not a restyle/edit or continuation of the reference artwork. State the visual exclusions immediately before generation so the earlier source composition cannot dominate: no character, no face, no literal eye/iris, no faux windows/title bars, no targeting HUD, no orbital rings, no stars, no glitch fragments, no extra panels, and no wordmark.
+
+Required central construction: one bold, asymmetric forked-core mark whose continuous cyan-blue form resolves into **two broad, independently readable negative-space channels**. The split itself must carry the cloning meaning. The aperture/eye reference is optional and should be omitted from the next render; avoid circular or concentric constructions entirely. Use crisp near-flat/vector-like geometry, one main mass plus at most one subordinate echo, a dark rounded-square tile on a plain white presentation canvas, and the established FLY8 palette.
+
+If the image tool continues to produce the old composition, reject the output instead of scoring it generously or making another adjective-only edit. Change the concept language and prioritize silhouette, negative space, and detail count. No candidate can receive an all-five acceptance until the actual image is inspected and the required tests are performed.
