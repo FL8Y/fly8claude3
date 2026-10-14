@@ -21,3 +21,8 @@ Build a distinct, professional Android cloning-app identity. Preserve a near-bla
 ## Quality rule
 
 Aim for 5/5 across the defined scorecard, but never declare a design perfect by assertion. Score it against evidence, perform an adversarial review, revise identifiable weaknesses, and report the remaining caveats honestly.
+
+
+## Current FLY8 Clone visual identity
+
+The current logo asset set lives in [design/assets](design/assets/README.md). The canonical presentation SVG is [FLY8_Clone_Logo.svg](design/assets/FLY8_Clone_Logo.svg); full-bleed launcher and adaptive foreground/background/monochrome vectors are documented alongside it. The long-form prompt is [FLY8-CLONE-LOGO-MASTER-PROMPT.md](design/FLY8-CLONE-LOGO-MASTER-PROMPT.md), and the review history and scorecard are in [FLY8-PROMPT-QA-COUNCIL.md](design/FLY8-PROMPT-QA-COUNCIL.md).
