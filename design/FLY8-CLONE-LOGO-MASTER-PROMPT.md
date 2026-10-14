@@ -182,6 +182,13 @@ Use the following as the primary generation prompt. Do not shorten away its core
 >
 > The central idea must survive as a flat black silhouette. If the cyan color, shading, and tiny details were removed, viewers should still be able to distinguish the mark from a generic clone-app icon.
 >
+>
+> **OWNABILITY LOCK — DO NOT DRAW A STOCK EYE OR CAMERA**
+>
+> The “forked aperture / echo iris” is a metaphor for the mark's construction, not permission to draw a conventional eye, camera lens, target, fingerprint, or concentric-circle symbol. Build the final silhouette as a bespoke, asymmetrical glyph: one confident outer path with a purposeful interruption or fork, and one offset internal echo that creates two distinct but related negative-space chambers. Avoid radial iris blades, multiple concentric rings, a centered bullseye, circular lens rings, and equal-sized nested outlines. The distinctive cue must be the exact relationship between the interrupted outer contour, the forked terminal, and the inner void—not a generic glowing pupil. Favor a geometry that a designer could redraw from memory after one glance.
+>
+> Make the branch/echo visible even without gradients. It should read as “one becomes two separate instances” before it reads as “eye” or “camera.” If the first generated composition looks like a camera, biometric scanner, or stock abstract eye, reject it and pivot to the split-path negative-space route rather than merely changing color or lighting.
+
 > **COMPOSITION**
 >
 > Produce a single centered 1:1 app-icon composition. Use a dark rounded-square/squircle tile as the icon's internal background, on a separate plain white presentation canvas. Keep the tile centered and evenly spaced with generous white margins. Within the tile, center one mark with safe space around every extremity; never let the primary contour sit so close to the edge that Android's rounded/adaptive mask could clip it.
@@ -287,6 +294,101 @@ The prompt now contains:
 - a revision process that fixes observable weaknesses instead of regenerating randomly.
 
 This verifies the **prompt specification**. It does not certify a future generated image. The actual image must be examined and scored after generation.
+
+---
+
+## 6A. Extended prompt assurance — adversarial audit before generation
+
+This section audits the prompt itself, not a generated image. A strong prompt reduces avoidable failures; it cannot guarantee that a generative model will obey every requirement or that the resulting mark is objectively perfect.
+
+### Concept routes considered
+
+Do not treat the first coherent idea as the winning one. Compare at least these three concept families before generating:
+
+| Route | Product meaning | Main risk | Decision rule |
+|---|---|---|---|
+| A. Asymmetric forked aperture / echo-iris | One core produces a separate, parallel instance | Can drift into a camera, biometric scanner, or generic eye | Keep only if the branch/echo is the primary semantic cue and the silhouette is not concentric |
+| B. A bespoke F/8-derived monogram with split counters | Brand-specific FLY8 signature plus two contexts | May become typography, a literal 8, or an infinity mark; harder to understand without the brand name | Use only if the letter/number hint stays subtle and the icon is more memorable than route A |
+| C. Single split-path glyph with two negative-space chambers | A source path divides into two independent, related destinations | Can become an abstract networking/VPN glyph with weak app-cloning meaning | Use if the fork and separate chambers are obvious without text, and the contour is unusually ownable |
+
+**Current decision:** Start with route A but apply route C's split-path logic and ban standard concentric-eye construction. Do not force the aperture concept if it fails the critique council. Route B remains a contingency, not a mandatory decorative letterform.
+
+### Five-pass prompt verification
+
+Run these passes in order. If a pass finds a concrete weakness, revise the prompt before moving on; do not merely acknowledge the weakness.
+
+**Pass 1 — Product and audience fit**
+- Is this unmistakably a cloning utility for distinct app instances, rather than generic productivity, cloud storage, privacy, or “technology”?
+- Does the symbol encode controlled branching / separate contexts without adding unrelated visual elements?
+- Does the prompt avoid unsupported feature implications such as anonymity, unlimited clones, or guaranteed compatibility?
+- Is FLY8's dark cyan-blue identity present without turning the icon into fan art or game-cheat branding?
+
+**Pass 2 — Ownability and cliché resistance**
+- Could this prompt produce the same icon for a camera, eye-tracking app, VPN, cloud drive, or generic AI assistant? If yes, the shape relationship is not specified tightly enough.
+- Is the asymmetry and split/echo relationship concrete enough to differentiate the mark from concentric rings, infinity symbols, stacked cards, and standard aperture glyphs?
+- Does the prompt require a memorable outer contour, not just a pleasant palette and surface treatment?
+- Does it allow the concept to be rejected and replaced if the motif still feels stock?
+
+**Pass 3 — Composition and output clarity**
+- Is the 1:1 aspect ratio explicit?
+- Is the pure-white presentation canvas clearly separate from the near-black icon tile?
+- Is only one mark requested, centered, with enough clear space for common Android adaptive-icon masks?
+- Are any typography, device mockups, screenshots, labels, panels, and alternate-logo sheets explicitly prohibited?
+- Are mark scale and margins relative to the tile, rather than specified in ambiguous absolute pixels?
+
+**Pass 4 — Generation feasibility and contradiction check**
+- Do “vector-like,” “subtle depth,” and “premium” support one coherent visual treatment, or do they invite photorealistic 3D? Prefer crisp, near-flat form; depth is subordinate and optional.
+- Are color constraints strict enough to prevent neon bloom, rainbow gradients, and countless cyan outlines?
+- Does the prompt ask for details that will disappear at launcher size? Remove them instead of adding a later disclaimer.
+- Can every requirement be visualized in one image without text or a multi-panel presentation?
+- Does the prompt describe a mark, rather than a concept illustration, poster, UI mockup, or product screenshot?
+
+**Pass 5 — Failure pre-mortem and final handoff**
+Imagine the most likely bad image before generation: (1) two overlapping blue squares; (2) concentric camera/eye rings; (3) an anime eye surrounded by cyberpunk clutter; (4) an infinity loop; (5) a glassy 3D object; (6) a generic AI/network glyph; (7) a symbol with hairline details; or (8) the icon tile blending into the white page. For each failure, verify that the prompt contains a specific preventative constraint and an explicit rejection response.
+- Make sure the prompt says what the design should be, not only what it should avoid.
+- Remove contradictions; keep the primary symbol construction, palette, output canvas, and negative prompt aligned.
+- Confirm that the refinement protocol changes geometry when needed, not only gradient or lighting.
+- Confirm that reviewers must give evidence and can reject the concept itself.
+
+### Prompt quality scorecard
+
+Before image generation, score the prompt itself on a 1–5 scale:
+
+| Prompt dimension | What earns 5/5 |
+|---|---|
+| Product specificity | A generic app designer could not apply it unchanged to any utility app |
+| Symbol construction | Main contour, split, echo, and negative-space relationship are concrete but not mechanically overprescribed |
+| Ownability | Explicitly resists category clichés and provides an alternative concept if the core motif fails |
+| Color discipline | Fixed project palette and role hierarchy; effects cannot replace form |
+| Composition clarity | Canvas, tile, aspect ratio, scale, safe margins, and single-mark output are unambiguous |
+| Small-size feasibility | Essential meaning lives in the silhouette and generous negative space, not fine detail |
+| Negative prompt quality | Likely failure modes are named precisely, including the rejected previous design |
+| Cross-instruction consistency | No contradictory requirements about style, background, detail, or output format |
+| Reviewability | The generated candidate can be evaluated using explicit dimensions and observable evidence |
+| Iteration quality | Each revision targets ranked defects; weaker candidates do not replace the best-so-far candidate |
+
+**Prompt acceptance threshold:** Every dimension must reach 5/5 after revision. If a dimension cannot honestly receive 5/5, do not claim that prompt verification is complete. State the unresolved ambiguity and either revise the prompt or make a clearly labeled, minimal design assumption. This scorecard rates prompt completeness, not the quality of a future image.
+
+### Prompt-review council
+
+Before image generation, ask five separate reviewer roles to examine the prompt (not the generated image):
+
+1. **Product/brand strategist:** Find wording that could lead to a generic “tech” mark; require a brand-specific semantic distinction.
+2. **Senior identity designer:** Find cliché-prone geometry, over-prescription, or a symbol that cannot be remembered as a silhouette.
+3. **Image-generation failure analyst:** Predict likely model misinterpretations, ignored constraints, visual artifacts, and clashes between positive and negative instructions.
+4. **Android launcher specialist:** Identify weak downscaling, fragile details, adaptive-mask clipping, or a composition that is only attractive at large size.
+5. **Independent skeptical customer:** Explain what the icon might be mistaken for after a one-second glance and what single visible feature would make it more distinct.
+
+Each reviewer must identify one strength, one likely failure, one specific rewrite, and a 1–5 prompt score for the criteria they own. The synthesis must preserve disagreement: if the concept specialist likes route A but the skeptical customer reads “camera,” the prompt must resolve that disagreement rather than average the votes.
+
+### Prompt-audit result for this revision
+
+- **Weakness identified:** “Aperture / iris” language risks steering the model toward concentric camera-lens or biometric-scanner imagery.
+- **Revision made:** Added an ownability lock requiring an asymmetrical forked contour, an offset echo, and two related negative-space chambers; explicitly bans concentric-eye construction and tells the reviewer to reject rather than recolor a stock-looking result.
+- **Remaining uncertainty:** Prompt wording cannot prove that the image model will produce a unique mark or obey exact geometry. The generated result still needs visual inspection, small-size checks, grayscale/silhouette review, and the post-generation council.
+- **Upstream tooling status:** The UI/UX Pro Max logo reference and prompt-engineering documentation were inspected. The upstream logo-search script was not executed in this environment, so this document does not claim any tool-generated style rankings or search scores.
+
+---
 
 ---
 
