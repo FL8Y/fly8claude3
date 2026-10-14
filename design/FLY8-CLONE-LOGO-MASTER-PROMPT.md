@@ -190,7 +190,7 @@ Use the following as the primary generation prompt. Do not shorten away its core
 >
 > **STRICT EXCLUSIONS**
 >
-> No literal anime character, no human/animal face, no realistic eye illustration, no hair, no faux desktop dialogs, no window title bars, no YES/NO buttons, no screenshots, no floating UI cards, no stacked rounded squares, no generic infinity symbol, no cloud icon, no folder icon, no copied trademark, no letters or words, no “FLY8” text, no typography, no slogan, no watermarks, no device mockup, no collage, no multiple competing logos, no gradients for their own sake, no busy cyberpunk background, no arbitrary circuit pattern, no heavy outer glow, no photorealism, no realistic 3D render, no stock icon aesthetic, no low-resolution edges, no warped or uneven geometry.
+> No literal anime character, no human or animal face, no eye, iris, lens or aperture motif, no hair, no faux desktop dialogs, no window title bars, no YES/NO buttons, no targeting HUD, no orbital rings, no stars, no glitch fragments, no particles, no extra panels, no screenshots, no floating UI cards, no stacked rounded squares, no generic infinity symbol, no network-node diagram, no arrows, no cloud icon, no folder icon, no copied trademark, no letters or words, no “FLY8” text, no typography, no slogan, no watermarks, no device mockup, no collage, no multiple competing logos, no circles or concentric construction, no gradients for their own sake, no busy cyberpunk background, no arbitrary circuit pattern, no heavy outer glow, no photorealism, no realistic 3D render, no stock icon aesthetic, no low-resolution edges, no warped or uneven geometry.
 >
 > **OUTPUT REQUIREMENTS**
 >
