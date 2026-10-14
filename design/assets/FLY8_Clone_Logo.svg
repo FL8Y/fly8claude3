@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<title>FLY8 Clone — asymmetric forked-core logo</title>
+<defs>
+ <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#010205"/><stop offset="0.62" stop-color="#000001"/><stop offset="1" stop-color="#01132A"/></linearGradient>
+ <linearGradient id="upper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#176E94"/><stop offset="1" stop-color="#01304C"/></linearGradient>
+ <linearGradient id="lower" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#176E94"/><stop offset="1" stop-color="#176E94"/></linearGradient>
+</defs>
+<rect width="1024" height="1024" fill="#FFFFFF"/>
+<rect x="136" y="136" width="752" height="752" rx="168" fill="url(#tile)"/>
+<rect x="139" y="139" width="746" height="746" rx="165" fill="none" stroke="#01304C" stroke-opacity="0.65" stroke-width="4"/>
+<g transform="translate(-102.4 -102.4) scale(1.2)"><path d="M370 493 L459 402 Q484 376 520 376 H700 L658 420 H527 Q514 420 502 432 L425 510 Z" fill="url(#upper)"/>
+<path d="M370 531 L451 602 Q475 625 510 625 H650 L690 669 H510 Q479 669 455 646 L370 551 Z" fill="url(#lower)"/>
+<path d="M384 492 L465 409 Q488 389 521 389 H672" fill="none" stroke="#FCFDFD" stroke-opacity="0.76" stroke-width="9" stroke-linecap="round"/>
+<path d="M343 512 L382 473 L421 512 L382 551 Z" fill="#FCFDFD"/>
+<path d="M355 512 L382 485 L409 512 L382 539 Z" fill="#176E94"/></g>
+</svg>
