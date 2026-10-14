@@ -243,3 +243,37 @@ After generation, confirm separately:
 - [ ] The final report names any actual limitation.
 
 **Principle:** The prompt is finished when its instructions are clear and internally consistent. The logo is finished only when the generated candidate earns the acceptance criteria through actual review.
+
+
+## 11. Additional cross-file coherence review — 2026-10-15
+
+This is a follow-up review of the saved repository instructions after the prompt and skill were read back from GitHub. It checks consistency between files, not the quality of a future image.
+
+### Pass 1 — Cross-file traceability
+
+- Confirmed the root README points to the FLY8-specific skill, canonical master prompt, prompt QA council, and repository-level agent instructions.
+- Confirmed the skill directs logo tasks to both the long-form master prompt and this QA council.
+- Confirmed the canonical master prompt retains the exact FLY8 palette, one-icon requirement, white presentation canvas versus dark internal icon tile, anti-generic exclusions, calibrated five-star rubric, and raster-versus-vector honesty rules.
+- Confirmed the source inventory links to the relevant upstream UI/UX Pro Max README, core skill, logo design workflow, style guide, color psychology, prompt engineering, and UX/mobile review references.
+
+### Pass 2 — Consistency defects found and corrected
+
+1. **Reading order:** The current concept decision was placed after the visual-specification section, which made the plan feel backward. It has been moved before the visual specification so the document now reads: brief → pre-generation workflow → concept decision → visual system → canonical image prompt.
+2. **Instruction drift:** The repository-level instructions still described the aperture as the default direction, while the current working concept had evolved to a forked-core / dual-channel mark. The stale instruction was updated to tell the agent to challenge the current concept rather than privilege the old aperture idea.
+3. **Concept hierarchy:** The dual-channel route remains the current working hypothesis, but the route-selection gate still permits replacing it if review finds that it resembles generic network branching, a camera, a biometric scanner, or another stock technology symbol. The chosen direction is not an instruction to ignore evidence.
+4. **Section references:** Verified that the canonical prompt, prompt-verification log, calibrated evaluation supplement, post-write verification record, and Android handoff section remain present and cross-referenced. The upstream CLI is not claimed to have been executed.
+
+### Pass 3 — Adversarial usefulness check
+
+The strongest remaining risk is that an image model may still produce a generic abstract tech mark despite the dual-channel description. The prompt must therefore be judged by the actual contour, not by its own explanation. Reject a candidate if its one-to-two logic is not visually apparent, if it resembles a generic networking/sync logo, or if its silhouette needs a caption. Do not attempt to rescue a weak concept with more cyan glow, texture, or floating interface decoration.
+
+### Prompt-only acceptance result
+
+The 12 prompt-quality dimensions in Section 3 remain rated 5/5 under this repository's explicit rubric because the written prompt states the product, symbol logic, alternatives, anti-cliché checks, palette, framing, scale expectations, exclusions, production truth, and revision protocol. This is an internal documentation assessment—not an independent human panel and not a rating for generated artwork.
+
+### Evidence limits
+
+- Upstream documentation pages were read through repository file retrieval.
+- The upstream UI/UX Pro Max CLI/search scripts were not executed.
+- This review did not perform user research, trademark clearance, or independent human critique.
+- A generated image must be assessed separately with observed evidence. Actual 24/32/48 px renders, grayscale, one-color silhouette, adaptive-mask previews, and Android packaging remain unverified until those steps are carried out.
