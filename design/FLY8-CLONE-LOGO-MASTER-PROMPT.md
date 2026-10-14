@@ -650,3 +650,67 @@ If this preflight cannot be completed, pause and resolve the missing information
 
 - **v2 supplement — 2026-10-15:** Added upstream source inventory; concept-selection gate; calibrated score anchors; critical gates; explicit evidence labels; simulated-versus-independent council distinction; four-pass critique protocol; candidate ledger; practical downscale/grayscale/mask checks; two-pass literal prompt audit; and honest acceptance policy.
 - The original brief, palette, canonical master prompt, rejected directions, and initial prompt verification log above remain in force unless explicitly revised with a documented reason.
+
+
+---
+
+## 13. Post-write verification pass and council addendum
+
+This section was added after the files were committed and fetched back from GitHub for verification.
+
+### Verification pass 1 — completeness and source fidelity
+
+**Checks performed**
+- Confirmed the master prompt includes product context, audience, stated brand promise, exact project palette, reference handling, symbol construction, output composition, negative prompts, scoring, critique roles, and a bounded revision process.
+- Confirmed the canonical prompt asks for one icon—not a collage—and differentiates the dark app tile from the white presentation canvas.
+- Confirmed the skill and project-wide instructions link to this prompt and point to the real upstream UI/UX Pro Max repository.
+- Checked the saved README, CLAUDE.md, skill file, and master prompt by fetching them back from `FL8Y/fly8claude3`.
+- Reviewed upstream documentation pages for the general workflow, logo design reference, style guide, color psychology, and prompt-engineering reference.
+
+**Limits:** The upstream CLI/search scripts were not executed in this session. This is a documentation-based application of their guidance, not a tool-generated design brief. The future artwork has not yet been scored by this prompt-only verification.
+
+### Verification pass 2 — adversarial gaps identified
+
+1. **Risk: the aperture idea could still read as a camera or biometric scanner.** A warning alone may not stop the generator from following the word “iris.”
+   - **Added safeguard:** if the concept reads as a camera, fingerprint/biometric reader, or generic lens, reject it at concept selection. Do not fix it with extra decoration. Switch to an original forked-core / dual-channel mark with a custom F/8-like negative-space relationship, and score that alternative against the same brief.
+2. **Risk: “vector-like” can be mistaken for delivery of a real vector file.** Image generation usually returns raster artwork.
+   - **Added safeguard:** do not describe the image as an SVG or launcher-ready adaptive asset unless a real vector/export step has been completed. Treat the image as a visual master concept; prepare adaptive foreground/background assets and test launcher masks separately.
+3. **Risk: small-size performance could be asserted without actually seeing a scaled preview.**
+   - **Added safeguard:** label any 24/32/48 dp assessment as conceptual unless rendered-size previews were actually inspected. Never state that Android launcher testing occurred unless it did.
+4. **Risk: a strong average could conceal a failed critical dimension.**
+   - **Added safeguard:** product fit, originality, instant recognition, and small-size legibility remain critical. A high average does not neutralize a generic silhouette.
+
+### Verified addition to the canonical prompt
+
+Use this conditional concept-selection gate before image generation:
+
+> **CONCEPT REJECTION GATE:** Before locking the forked-aperture direction, compare it in writing with two alternatives: (A) a custom forked-core/dual-channel symbol using negative space to imply one-to-two independent instances; (B) a restrained F/8-inspired abstract monogram where two distinct paths share one structural core. Prefer the aperture only when it is more distinctive and less likely to be mistaken for a camera, biometric scanner, or generic eye. If it fails that test, switch concept before generating. Never generate a concept merely because it is the initial favorite.
+
+Use this production truth after image generation:
+
+> **ASSET REALITY CHECK:** An image-model PNG is raster artwork, even when its visual style is vector-like. Do not promise crisp infinite scalability, a clean SVG, or an Android-ready adaptive icon until those deliverables have actually been created and verified. If the visual concept is accepted, plan a separate implementation/export step with a foreground mark, background layer, safe-zone check, raster size checks, and a grayscale/silhouette review.
+
+### Council result for the prompt itself
+
+This is a role-based adversarial review written into the project specification, not five independent human reviewers or five different AI agents.
+
+| Reviewer lens | Prompt-level judgment | Required disposition |
+|---|---|---|
+| Brand strategist | Strong product framing; the central concept needed an explicit escape route if the eye metaphor turned generic. | Add the concept rejection gate above. |
+| Logo designer | Shape instructions are concrete, but “vector-like” could overpromise technical output if phrased carelessly. | Preserve vector-like appearance, but clarify that image generation does not itself create SVG. |
+| Android launcher specialist | Scale/mask requirements are useful, but genuine small-size verification depends on a real preview. | Add the asset reality check and truthful scale-testing language. |
+| Color/production critic | Restricted palette and anti-glow rules are strong; evaluate geometry with effects off. | Keep the grayscale/silhouette gate and reject glow-dependent marks. |
+| Adversarial end user | Icon might still be misread as a camera or biometric/security utility if the aperture dominates the branch/echo cue. | Make the second independent path unmistakable and choose an alternative concept if necessary. |
+
+### Final verification checklist
+
+- [x] Product context and explicit anti-generic constraints are present.
+- [x] The long-form master prompt is linked from the root README and project instructions.
+- [x] The design skill is discoverable at `.claude/skills/fly8-brand-design/SKILL.md`.
+- [x] A council protocol, ten-category scorecard, and revision gate are documented.
+- [x] The prompt has been audited for a camera/biometric ambiguity and a raster-versus-vector limitation.
+- [x] Saved files were fetched back from GitHub after writing.
+- [ ] A generated image has been reviewed against the scorecard. This is intentionally unchecked until an actual candidate exists.
+- [ ] Actual 24/32/48 dp renders, grayscale exports, SVG conversion, and adaptive-icon mask tests have been performed. These are production checks, not things a prompt can certify.
+
+The prompt is ready for image generation. The artwork itself must still earn the rating.
