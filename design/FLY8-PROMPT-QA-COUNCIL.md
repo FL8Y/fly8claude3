@@ -340,3 +340,56 @@ The next attempt must be framed as a **new original icon**, not a restyle/edit o
 Required central construction: one bold, asymmetric forked-core mark whose continuous cyan-blue form resolves into **two broad, independently readable negative-space channels**. The split itself must carry the cloning meaning. The aperture/eye reference is optional and should be omitted from the next render; avoid circular or concentric constructions entirely. Use crisp near-flat/vector-like geometry, one main mass plus at most one subordinate echo, a dark rounded-square tile on a plain white presentation canvas, and the established FLY8 palette.
 
 If the image tool continues to produce the old composition, reject the output instead of scoring it generously or making another adjective-only edit. Change the concept language and prioritize silhouette, negative space, and detail count. No candidate can receive an all-five acceptance until the actual image is inspected and the required tests are performed.
+
+
+## 12. Generation preflight — split-core icon, 2026-10-15
+
+**State:** Prompt ready; image not yet reviewed. This section records the design decision and literal prompt audit for the next image generation. The scores below are design-planning judgments, not measured user research or artwork scores.
+
+### Concept routes compared
+
+| Route | Product fit | Ownability | Silhouette | 24 dp plausibility | Primary risk | Decision |
+|---|---:|---:|---:|---:|---|---|
+| A — Eye/aperture echo | 3 | 2 | 3 | 3 | Camera/biometric/vision-tool interpretation; conflicts with the latest rejection of the previous anime-eye imagery. | Reject for this generation. |
+| B — One asymmetrical split-core with two broad negative-space lanes | 4 | 4 | 4 | 4 | Could still become a generic network branch if drawn as thin lines. | Selected for testing; constrain it as one solid mass with exactly two broad cutout lanes, no nodes, arrows, cards or circle geometry. |
+| C — F/8-derived abstract monogram | 3 | 3 | 4 | 4 | May become forced lettering, a generic loop, or an unreadable lettermark. | Keep as fallback if B fails its first-glance or silhouette test. |
+| D — One-to-parallel path | 4 | 3 | 4 | 4 | Can read as synchronization/network software rather than cloning. | Not selected because it overlaps structurally with B but offers a less ownable silhouette constraint. |
+
+Route scores are heuristic and provisional. Product fit, ownability, silhouette, and small-size behavior are hard decision dimensions; a high average would not excuse a failure in one of them.
+
+### Literal prompt patches applied to the canonical master prompt
+
+1. Replaced optional iris/aperture language in the active concept instructions with a specific ban on eyes, apertures, lenses, circles, and concentric construction for this generation.
+2. Specified one continuous, bold, asymmetric cyan-blue mass with a broad structural spine and exactly two broad, offset negative-space lanes.
+3. Added a purposeful outer contour/offset shoulder to help avoid a generic Y/network symbol, while explicitly banning nodes, arrows, three-pronged branches, card outlines, and detached objects.
+4. Added explicit exclusions for targeting HUDs, orbital rings, stars, glitch fragments, particles, extra panels, and network-node diagrams.
+5. Preserved the one-icon output, plain white presentation canvas, centered dark rounded-square tile, restricted FLY8 palette, no text, and small-size/silhouette expectations.
+6. Retained the alternate-concept gate: if the dual-channel form reads as generic networking, change the concept rather than decorating it.
+
+### Three-pass prompt verification
+
+**Pass A — traceability:** Product and audience, cloning meaning, unique geometry, palette, composition, exclusions, small-size expectations, and post-generation tests are all stated in the current canonical Section 5 prompt.
+
+**Pass B — ambiguity and contradiction:** The active generation prompt no longer asks for an eye/aperture while simultaneously banning it. The tile is explicitly dark and the separate presentation canvas white. One icon is requested; no collage or wordmark is allowed. The negative-space channels are broad, not thin linework, and effects cannot substitute for silhouette.
+
+**Pass C — simulated multi-lens council:**
+- Brand strategist: Product meaning is now tied to two separate lanes within one shared core; a caption must not be needed.
+- Identity designer: One mass and two broad channels are clearer than decorative stacked windows, but ownability remains unproven until the actual contour is inspected.
+- Android launcher specialist: Broad voids and a compact safe zone favor reduction; 24/32/48 px behavior remains **not tested** until previews exist.
+- Art director: The restricted palette and near-flat finish are compatible; no glow, orbital decoration, or glass panels should be used to fill empty space.
+- Skeptical end user / contrarian: The remaining risk is a generic branch/network glyph. Reject it if the two lanes are not part of a distinctive monolithic silhouette.
+
+### Prompt-quality decision
+
+The canonical prompt passes the specified prompt-only requirements for this generation: product grounding, concept clarity, route flexibility, anti-generic constraints, hierarchy, palette, framing, small-size intent, style coherence, negative prompt, production honesty, and revision protocol. This is a prompt gate only. It does not pre-score the generated image or guarantee a 5/5 artwork result.
+
+### Post-generation validation remains open
+
+- [ ] Full-size artifact inspection.
+- [ ] Actual 24 px, 32 px, and 48 px previews inspected at native scale.
+- [ ] Grayscale and one-color silhouette preview inspected.
+- [ ] Rounded-square and circle/adaptive-mask previews inspected where practical.
+- [ ] Ten image dimensions scored from visible evidence.
+- [ ] Compared with the rejected previous candidates; keep/revise/reject decision recorded.
+
+Do not call the candidate five-star until these checks are actually completed and the critical image dimensions pass.
