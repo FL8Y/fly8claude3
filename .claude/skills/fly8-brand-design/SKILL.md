@@ -11,6 +11,8 @@ Create a recognizable, original visual identity for FLY8 Clone: an Android utili
 
 Read `design/FLY8-CLONE-LOGO-MASTER-PROMPT.md` before starting a logo task. It contains the product brief, canonical image prompt, review council, scorecard, negative prompt, and refinement protocol.
 
+Also read `design/FLY8-PROMPT-QA-COUNCIL.md` before generation. Run its prompt-only completeness, ambiguity, and adversarial-council checks before using the image model. Keep prompt scores separate from scores for the actual generated image.
+
 ## Source of principles
 
 This project-specific skill is informed by [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), particularly its structured product/style/palette reasoning, logo design brief workflow, scalability checklist, negative prompts, and pre-delivery review discipline. It is not a vendored copy and does not claim that upstream scripts are installed.
