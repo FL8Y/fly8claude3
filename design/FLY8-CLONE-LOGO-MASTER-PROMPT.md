@@ -415,3 +415,238 @@ Remaining limitations: [...]
 ```
 
 The objective is not to manufacture a perfect rating. The objective is to do the work required for an exceptional design and honestly distinguish a strong concept from a verified final asset.
+
+
+---
+
+# Version 2 Supplement — Calibrated Evaluation, Evidence Gates, and Production Verification
+
+**Review date:** 2026-10-15  
+**Purpose of this supplement:** Strengthen the existing prompt without discarding the product context and constraints already established above. This supplement is normative wherever it clarifies how reviews, scores, or claims must be made.
+
+## 13. Upstream source review and scope
+
+The project-specific method is informed by the following upstream UI/UX Pro Max sources. Consult the current versions before changing this standard:
+
+- [Upstream README and design-system method](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/README.md)
+- [Core UI/UX Pro Max skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md)
+- [Unified design skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/design/SKILL.md)
+- [Logo design workflow](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/design/references/logo-design.md)
+- [Logo style guide](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/design/references/logo-style-guide.md)
+- [Logo color psychology](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/design/references/logo-color-psychology.md)
+- [Logo prompt engineering](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/design/references/logo-prompt-engineering.md)
+
+The upstream project describes a design-intelligence workflow: analyze product context, use style/color/industry guidance where available, choose an appropriate design direction, consider anti-patterns, write specific prompts with negative constraints, and perform a pre-delivery review. Its logo guide recommends beginning with a design brief, researching style/color/industry options, and checking scalability. Its prompt guide cautions against excessive detail, unclear backgrounds, text-generation problems, incorrect aspect ratio, and photorealistic rendering when a scalable illustration is intended.
+
+**Scope and honesty rules:**
+
+1. Reading documentation is not the same as executing the upstream CLI. Record separately which files were read and which commands or searches actually ran.
+2. A tool result must be inspected for relevance before being applied. Never invent a result, recommendation, score, version, test, or citation.
+3. This file is a project-specific baseline inspired by the upstream project; it is not a vendored copy of the upstream repository and does not make the upstream scripts available automatically.
+4. If upstream guidance conflicts with a product fact in the actual FLY8 repository, verify the product fact and adapt the design. Do not fabricate product capabilities to make a logo concept fit.
+5. The white presentation canvas requirement applies to the *presentation image*. The launcher artwork itself remains a self-contained dark icon tile unless the user asks for another export format.
+
+## 14. Concept-selection gate: explore before you commit
+
+Before writing the final image-generation prompt, consider at least three concept routes. Do not create three superficial variants of the same stacked-card idea. Give each route a distinct construction and meaning.
+
+Possible routes to evaluate:
+
+- **Route A — Forked aperture / echo iris:** One core contour branches into a distinct second path. Strength: can encode focus and duplication in one compact mark. Risk: may look like a camera lens or biometric scanner.
+- **Route B — Bespoke F/8-derived monogram:** Use an original abstract construction inspired by F and/or 8 only if the letterform itself communicates distinct instances. Strength: potential brand ownability. Risk: may become a generic letter logo or be misread as a camera aperture.
+- **Route C — Split-core / twin-negative-space mark:** One continuous outer form contains two intentionally separate internal counters or paths. Strength: can communicate independent contexts without literal cards. Risk: may become an ordinary abstract tech blob.
+- **Route D — One-to-parallel path mark:** A single path enters a compact structure and resolves into two independent negative-space lanes. Strength: direct parallel-instance semantics. Risk: can resemble branching, sync, or network software.
+- **Route E — Another researched concept:** Required if the first routes are too familiar, derivative, or poorly suited to the audience.
+
+Score each route from 1–5 on product fit, ownability, silhouette strength, 24 dp plausibility, and distinctiveness from common categories. Write one strength, one likely confusion, and one disconfirming reason for each. Choose only after comparing them. If every route is mediocre, do another conceptual pass; do not force the first idea just because it is named in this document.
+
+Use the following conceptual weighting to rank *routes* (not final candidates):
+- Product fit and meaning: 25%
+- Distinctive silhouette and small-scale potential: 25%
+- Originality/ownability: 20%
+- Restraint and professional execution potential: 15%
+- Fit with the established FLY8 palette: 15%
+
+A route with a serious failure in product fit, originality, or silhouette must not win solely because its weighted average is high. The final icon must still satisfy the ten-category all-5 scorecard; weighted ranking is only for choosing what to explore.
+
+### Anti-cliché comparison
+
+For the favored route, explicitly compare the silhouette with at least these adjacent visual categories:
+- cloud storage / file managers;
+- multi-window / multitasking tools;
+- camera lenses / iris scanners;
+- VPN / privacy utilities;
+- AI assistants and generic “smart technology” symbols;
+- infinity loops / sync / link marks;
+- generic gaming or cyberpunk icons.
+
+State the most likely mistaken category and make one concrete structural change to reduce that confusion. A palette change alone does not solve a silhouette problem.
+
+## 15. A better five-point scoring scale
+
+Use the same 1–5 anchor meanings for all ten categories. Never award a 5 because the brief asks for five stars.
+
+- **1 — Fails:** Major defect; the criterion is not fulfilled.
+- **2 — Weak:** Some intended qualities are present, but a clear defect prevents competent use.
+- **3 — Acceptable:** Usable and understandable, but ordinary, inconsistent, or not yet polished.
+- **4 — Strong:** Clear and well-executed, with one identifiable weakness preventing excellence.
+- **5 — Excellent with evidence:** The requirement is met at the intended level, the major competing interpretations have been considered, and no material defect remains within the available evidence.
+
+A 5 does not mean metaphysical perfection or guaranteed positive user reception. It means that the stated test for that dimension has been met and no known material issue remains. If evidence is missing, use a provisional score or mark the criterion **not yet verified** instead of manufacturing certainty.
+
+### Category-specific 5/5 evidence
+
+1. **Product fit:** The visual logic supports distinct/parallel app instances. The meaning does not depend on a caption. At least one plausible alternative interpretation has been identified and addressed.
+2. **Originality / ownability:** The mark has a recognizable construction beyond a default icon metaphor. A reviewer can name its distinctive feature. It does not imitate the supplied reference or a known brand.
+3. **Instant recognition:** One primary shape dominates and can be remembered after a brief glance. Extra detail does not compete with it. This remains a design judgment unless user tests are actually run.
+4. **24 dp legibility:** The icon has been downscaled to a relevant preview or the limitation is clearly labeled conceptual. Essential gaps and counters survive. There is no dependence on hairlines or micro-details.
+5. **32–48 dp legibility:** Primary and secondary structures remain distinct; no aliasing or merged shapes break the intended meaning.
+6. **Silhouette:** A solid single-color version remains distinctive, coherent, and balanced without hue, lighting, gloss, or gradient.
+7. **Composition:** Optical balance, safe area, negative space, and shape hierarchy are convincing; the Android adaptive mask does not cut off meaningful parts.
+8. **Color discipline:** The FLY8 palette is used intentionally and minimally; grayscale/single-color checks retain meaning. Color does not compensate for weak geometry.
+9. **Professional finish:** Edges, joins, proportions, and symmetry/asymmetry look intentional. No visible generation artifacts, malformed contours, stray marks, or accidental symbols remain.
+10. **Platform readiness:** The file is a single 1:1 icon presentation without text or surrounding objects; the icon tile and symbol are unambiguous and can be extracted or redrawn without guessing what is part of the mark.
+
+### Critical gates versus average score
+
+A high average cannot hide a critical weakness. **Product fit, originality, 24 dp legibility, and silhouette are hard gates.** If any one is below 5, the candidate is not an all-five acceptance. Record every score independently and do not round 4.5 up to 5.
+
+For a generated image, label each claim:
+- **Observed:** visible directly in the supplied/rendered image.
+- **Checked:** a specified validation was performed, such as thumbnail downscaling.
+- **Inferred:** a reasoned expectation not yet tested.
+- **Unknown:** current evidence is insufficient.
+
+Do not describe inferred 24 dp behavior as tested. Do not describe subjective memorability as user-validated without an actual user test.
+
+## 16. Critique council: separation of roles and evidence
+
+Run these as separate review passes so the first impression does not dominate every later judgment. If independent people or distinct model reviewers are available, obtain genuinely independent critiques before sharing the prior scores. If only one model/operator is available, call this a **simulated multi-lens council**, not an independent panel.
+
+### Pass 1 — Blind first-glance review
+Look at the candidate before reading its prompt rationale. Record:
+- the first shape noticed;
+- the most likely product category;
+- the most likely wrong interpretation;
+- one remembered feature;
+- whether the icon feels like a logo or an illustration.
+
+Do not explain the intended metaphor to the reviewer before this pass.
+
+### Pass 2 — Specialist review
+Review separately from these lenses:
+- Brand strategist: product message and category fit.
+- Identity designer: form, ownability, geometry, negative space.
+- Android launcher specialist: small-scale behavior, masks, safe areas.
+- Color/production reviewer: palette, contrast, reproducibility, effects.
+- Skeptical user: fast-glance interpretation, confusion, memory hook.
+
+Each lens must produce a strength, a failure risk, a concrete change, and the category scores it can legitimately assess. Reviewers must be permitted to reject the central concept, not just request polish.
+
+### Pass 3 — Contrarian review
+Argue against the current favorite. Find the strongest reason to reject it. Examples include “the eye reads as biometric monitoring,” “the fork reads as network branching,” or “the echo is visually too similar to two generic cards.” State what evidence could disprove that objection.
+
+### Pass 4 — Decision
+Combine findings, remove duplicate feedback, rank the top three defects by user-facing impact, and select only a small number of high-impact changes. Do not average away a fatal flaw. Keep disagreement in the record when it remains unresolved.
+
+This council is a structured critique technique, not proof of outside validation. Report accurately which passes, tools, and reviewers were actually used.
+
+## 17. Candidate comparison and iteration ledger
+
+Maintain a compact ledger for each actual image candidate. Save the candidate identifier or file path and a brief objective description. Keep the best-known candidate unchanged until a successor is demonstrably stronger.
+
+Recommended ledger fields:
+- Candidate ID / file path.
+- Prompt revision and date.
+- Generation tool used (actual tool, not intended tool).
+- Main design change from the previous version.
+- Blind first-glance interpretation.
+- Most likely mistaken category.
+- Scores for all ten dimensions with one sentence of evidence each.
+- Validation performed: source dimensions, 24/32/48 px preview, grayscale, monochrome silhouette, mask preview, artifact inspection.
+- Accepted defects, unresolved risks, and decision: keep / revise / reject.
+- Why the current best beats the previous best.
+
+Never say “the latest is best” without comparing it. A newer candidate may be worse. If a revision fixes small-size legibility but harms originality, keep both candidates in the ledger and decide explicitly which trade-off matters more.
+
+### What counts as a useful iteration
+
+A useful iteration changes at least one structural variable based on a visible defect: path branch, counter shape, contour overlap, negative-space proportion, primary/secondary hierarchy, internal spacing, palette role, or detail count. A meaningless gradient shuffle, prompt adjective swap, or blind regeneration without a named issue is not a refinement cycle.
+
+Perform no more than eight purposeful generation-and-review cycles for a single deliverable unless the user explicitly authorizes additional cycles and each remaining pass has a specific unresolved defect to test. The goal is quality, not endless activity. Stop early only when all categories meet the honest 5/5 criteria. If the limit is reached, state exactly what remains below five and what alternative concept or test is needed next.
+
+## 18. Practical icon validation procedure
+
+When an actual candidate image is available as a local file and image tools are available, perform an artifact check instead of relying only on prompt wording.
+
+1. Inspect the full-resolution image for accidental text, inconsistent contours, warped geometry, unwanted extra objects, cropping, and background errors.
+2. Identify the actual icon tile boundary and confirm the symbol fits inside a reasonable adaptive-icon safe area.
+3. Make matched previews at 24 px, 32 px, and 48 px. Inspect each at 100% display scale, not only enlarged.
+4. Make a grayscale version and a solid one-color silhouette. Check that the main idea survives without color and effects.
+5. Preview against black, white, and medium neutral surroundings where feasible; ensure that the dark tile does not visually disappear into a dark presentation background.
+6. Preview at least rounded-square and circular crops when practical. Check that no meaningful contour is clipped.
+7. Re-open the resized images and inspect them visually. Successful file creation alone is not validation.
+8. If a step cannot be run, mark it **not tested** and avoid awarding an evidence-backed 5 for any dimension that depends on it.
+
+For actual Android packaging, distinguish the generated presentation image from the final launcher asset. If asked for production packaging, extract or redraw the mark cleanly, check Android adaptive-icon foreground/background separation, and provide appropriate densities/export formats only when they are actually generated. Do not claim a vector source exists merely because the image prompt requested vector-like styling.
+
+## 19. Prompt integrity audit before every generation
+
+Before handing the prompt to an image model, run this checklist against the literal final prompt (not merely against the planning notes):
+
+- [ ] Product identity and use case are stated.
+- [ ] The desired impression is specific, not just “modern/professional.”
+- [ ] The central symbol and its construction are concrete.
+- [ ] The relationship between the central idea and cloning is explicit.
+- [ ] The top likely misinterpretation has a countermeasure.
+- [ ] Style, depth, lighting, and palette agree rather than conflict.
+- [ ] White presentation canvas and dark icon tile are unambiguous.
+- [ ] Only one icon is requested.
+- [ ] Aspect ratio, margins, and icon scale are included.
+- [ ] Small-size and monochrome constraints are included.
+- [ ] Strict exclusions cover previous failed directions.
+- [ ] The prompt does not accidentally request tiny UI, a character illustration, a screenshot, a collage, or several options.
+- [ ] Every instruction is relevant; decorative adjectives do not drown out the silhouette instructions.
+- [ ] The actual image model can plausibly honor the requested output.
+- [ ] The reviewer knows which requirements can be visually checked after generation.
+
+### Two-pass prompt verification
+
+**Pass A — completeness:** Check requirements, symbolism, constraints, exclusions, and output format. List each missing or contradictory requirement. Make the necessary edits.
+
+**Pass B — adversarial feasibility:** Pretend to be an image model that tends to choose clichés. Ask which phrases still allow it to generate generic stacked panels, a stock camera lens, a literal eye, excessive glow, stray text, or tiny details. Tighten only the weak areas. Then read the final prompt top to bottom once more for internal contradictions.
+
+After these passes, record a short public-facing verification summary: the most important weakness found, what was added or removed, and which validation still must happen after generation. Do not record or expose private chain-of-thought; capture decisions and evidence only.
+
+## 20. Explicit “perfect five” policy
+
+The desired result is five stars in all ten categories. Do not reinterpret that request as an order to falsify a review.
+
+- Do not inflate a score to satisfy the user.
+- Do not claim “perfect” before reviewing an actual generated candidate.
+- Do not stop just because the prompt is long or sounds sophisticated.
+- Do not continue regenerating randomly after there is no testable design hypothesis.
+- Do continue when a meaningful weakness is identified and a reasonable next experiment exists.
+- Do not hide known trade-offs; explain what is strong and what remains uncertain.
+- Do not call a one-model role-play a genuine external council.
+- Do not assert market differentiation, memorability, trademark uniqueness, or actual user preference without appropriate research or testing.
+
+If all ten categories reach 5 after the stated checks, report that the candidate **meets this project's five-star rubric based on the recorded evidence**. Avoid unqualified claims of universal perfection. If one or more categories do not reach 5, the best honest result is a strong but not yet all-five candidate, along with its next actionable revision.
+
+## 21. Upstream-informed preflight summary
+
+Before each new logo task, capture the following six-line brief before using the canonical prompt:
+
+- **Product meaning:** Distinct app instances / parallel contexts.
+- **Primary deliverable:** One Android launcher icon / pictorial mark, no wordmark.
+- **Chosen concept:** [selected route + why it won over at least two alternatives].
+- **Style and palette:** [the chosen style and constrained FLY8 colors].
+- **Highest-risk ambiguity:** [likely category confusion + countermeasure].
+- **Proof planned:** [silhouette, monochrome, 24/32/48 px, mask, artifact check].
+
+If this preflight cannot be completed, pause and resolve the missing information or explicitly record a reasonable assumption. Do not jump straight from a vague request into an image-generation call.
+
+## 22. Change record
+
+- **v2 supplement — 2026-10-15:** Added upstream source inventory; concept-selection gate; calibrated score anchors; critical gates; explicit evidence labels; simulated-versus-independent council distinction; four-pass critique protocol; candidate ledger; practical downscale/grayscale/mask checks; two-pass literal prompt audit; and honest acceptance policy.
+- The original brief, palette, canonical master prompt, rejected directions, and initial prompt verification log above remain in force unless explicitly revised with a documented reason.
