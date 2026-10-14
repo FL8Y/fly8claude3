@@ -26,7 +26,7 @@ The master prompt contains the product brief, canonical generation prompt, promp
 1. **Inspect:** Read the two project sources and examine current app/repository/reference material when available. Separate verified product facts from assumptions.
 2. **Brief:** State product, audience/use context, desired impression, output format, palette, symbol logic, and non-goals.
 3. **Explore:** Compare at least three structurally different concept routes. For each, record a strength, a likely misinterpretation, and a reason it might fail. Do not render several weak ideas as a noisy collage.
-4. **Select:** Choose a direction based on product fit, originality, silhouette, small-size potential, restraint, and brand fit. Do not cling to the default aperture concept if critique shows it is too familiar.
+4. **Select:** Choose a direction based on product fit, originality, silhouette, small-size potential, restraint, and brand fit. Do not cling to the current forked-core / dual-channel concept if critique shows it is generic or unclear; the master prompt's concept gate can replace it before generation.
 5. **Prompt:** Write one explicit image prompt describing the central geometry and hierarchy, palette roles, rendering level, icon tile, presentation canvas, safe margins, scale constraints, and strict exclusions.
 6. **Verify prompt twice:** First inspect completeness and contradictions; then act as an adversarial image model likely to produce generic clichés. Patch the literal prompt based on the audit before generating.
 7. **Generate:** Use the actual available image tool. Never claim upstream scripts ran if they were only read about or are unavailable.
