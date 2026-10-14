@@ -1,14 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-<title>FLY8 Clone launcher icon</title>
-<defs>
+<title>FLY8 Clone launcher icon</title><defs>
  <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#010205"/><stop offset="0.62" stop-color="#000001"/><stop offset="1" stop-color="#01132A"/></linearGradient>
- <linearGradient id="upper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#176E94"/><stop offset="1" stop-color="#01304C"/></linearGradient>
- <linearGradient id="lower" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#176E94"/><stop offset="1" stop-color="#176E94"/></linearGradient>
-</defs>
-<rect width="1024" height="1024" fill="url(#tile)"/>
-<g transform="translate(-324.629787 -324.629787) scale(1.634043)"><path d="M370 493 L459 402 Q484 376 520 376 H700 L658 420 H527 Q514 420 502 432 L425 510 Z" fill="url(#upper)"/>
-<path d="M370 531 L451 602 Q475 625 510 625 H650 L690 669 H510 Q479 669 455 646 L370 551 Z" fill="url(#lower)"/>
-<path d="M384 492 L465 409 Q488 389 521 389 H672" fill="none" stroke="#FCFDFD" stroke-opacity="0.76" stroke-width="9" stroke-linecap="round"/>
-<path d="M343 512 L382 473 L421 512 L382 551 Z" fill="#FCFDFD"/>
-<path d="M355 512 L382 485 L409 512 L382 539 Z" fill="#176E94"/></g>
-</svg>
+ <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#176E94"/><stop offset="0.48" stop-color="#176E94"/><stop offset="1" stop-color="#01304C"/></linearGradient>
+ <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FCFDFD" stop-opacity="0.8"/><stop offset="1" stop-color="#FCFDFD" stop-opacity="0.04"/></linearGradient>
+</defs><rect width="1024" height="1024" fill="url(#tile)"/><g transform="translate(-162.042553 -185.191489) scale(1.361702)"><path d="M260 512 L370 345 Q390 320 420 320 H565 Q605 320 635 360 L730 450 L650 490 L590 512 L650 535 L730 575 L635 665 Q605 705 565 705 H420 Q390 705 370 680 Z M410 400 H552 Q576 400 598 421 L635 456 L590 478 H450 L385 438 Z M450 546 H590 L635 570 L598 607 Q576 625 552 625 H410 L385 587 Z" fill="url(#mark)" fill-rule="evenodd"/><path d="M278 485 L383 357 Q400 338 425 338 H560" fill="none" stroke="url(#edge)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
