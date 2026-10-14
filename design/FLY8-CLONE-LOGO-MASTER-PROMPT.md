@@ -5,6 +5,7 @@
 **Upstream design reference:** [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)  
 **Primary deliverable:** One original Android app icon / standalone brand mark  
 **Quality objective:** Five-star performance in every category, validated honestly through repeated critique and revision
+**Prompt QA gate:** [Prompt QA, red-team council, and iteration record](./FLY8-PROMPT-QA-COUNCIL.md)
 
 > This is a project brief and production prompt, not a claim that the upstream skill or logo-generation scripts have been installed or executed. Use the upstream design-brief/style/color workflow if it is available in the active environment. Otherwise, use the documented framework below and be transparent about what was or was not run.
 
