@@ -66,17 +66,13 @@ Keep color functional:
 
 ## Logo direction
 
-Default direction: a custom abstract pictorial mark with negative-space intelligence and near-flat vector clarity, plus only a controlled touch of dimensionality if it improves the mark. Do not assume a glossy 3D style just because the product is digital.
+Default direction: a custom abstract pictorial mark with negative-space intelligence and near-flat vector clarity, plus only a controlled touch of dimensionality if it materially improves the mark. Do not assume a glossy 3D style just because the product is digital.
 
-For the current concept, explore a **forked aperture / echo-iris** idea:
-- One compact, memorable aperture/lens-like core.
-- One continuous primary contour with a purposeful split or fork, indicating one app context branching into a separate instance.
-- A restrained offset echo/crescent or duplicated internal cut that encodes “another instance.”
-- A deliberate central negative-space pupil/core.
-- Slight asymmetry is allowed if it improves recognition and makes the mark less template-like.
-- Do not let the result collapse into a literal human eye, infinity sign, generic clone icon, or two equal rounded squares.
+Current preferred concept: a **forked-core / dual-channel mark**. One compact asymmetrical core has a continuous primary path that deliberately branches into two offset, independently readable channels. The path geometry—not a second pasted-on card—must encode one app context becoming a separate instance. Use a central negative-space core to anchor the shape. An aperture/iris hint may exist only as subordinate negative space if it helps; it must not read primarily as an eye, camera, or biometric scanner.
 
-This is a concept direction, not a mandatory icon geometry. If research or critique shows it is too familiar, invent and test a different product-specific concept before generation.
+Before committing, compare at least three structurally distinct routes, including the current route, an F/8-derived abstract monogram, and another distinct negative-space/parallel-path concept. Score each for product fit, ownability, silhouette, small-size potential, and likely category confusion. The forked-core concept is preferred, not sacred: if it fails the cliché or silhouette test, replace it before generation. Never combine all routes into a cluttered mark.
+
+Do not let the result collapse into a literal human eye, infinity sign, generic clone icon, cloud/file icon, or two equal rounded squares.
 
 ## Workflow (required)
 
