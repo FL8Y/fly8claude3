@@ -60,7 +60,7 @@ The final product is not a wallpaper, poster, character illustration, UI screens
 ### Central creative thesis
 Explore a **forked-core / dual-channel mark**: one compact, asymmetrical core whose continuous primary path intentionally divides into two offset, independently readable channels. The duplication is expressed by the geometry of one path becoming two distinct instance paths—not by stacking ordinary cards.
 
-A restrained aperture/iris hint may appear only as negative space within the core if it strengthens the mark; it must not dominate or make the icon read as a camera, biometric scanner, or generic eye. The central shape implies one identity; the deliberate fork/echo implies a separate instance. Favor original contour relationships, memorable proportions, and a slight controlled asymmetry over any familiar stock symbol.
+For the next generation, omit eye, aperture, iris, lens, circular, and concentric motifs; the supplied eye is mood reference only. Use a bold asymmetric split-core sigil: one continuous, compact structure with a shared spine that resolves into two broad, offset parallel channels expressed through negative space. The channels must be integral to the mark, not thin network branches or detached objects. The central structure implies one identity; the two separate lanes imply distinct app instances. Favor a memorable custom contour, controlled asymmetry, and broad geometry over familiar stock symbols.
 
 This is a tested concept direction, not permission to force bad geometry. If the form feels like a camera, scanner, infinity sign, or generic tech logo, reject it and explore another metaphor before generating.
 
@@ -90,7 +90,7 @@ Three directions were compared against product fit, ownability, small-size silho
 - **B — Forked-core / dual-channel mark:** one custom core branches into two offset, independently readable paths. It signals one-to-two instances without relying on literal windows and has the best balance of reference continuity and professional restraint.
 - **C — F/8-inspired abstract monogram:** potentially ownable to the FLY8 name, but risks reading as an infinity loop or making the logo depend on letter recognition.
 
-**Selected for generation: B — forked-core / dual-channel.** Keep an aperture-like hint only if the negative space naturally helps. If the candidate still looks like a camera, scanner, infinity glyph, or generic tech symbol, reject the concept rather than decorating it. This is a design judgment, not a claim of user-tested market uniqueness.
+**Selected working route: B — forked-core / dual-channel.** This selection is provisional and must still pass the latest-generation constraint: no eye, aperture, lens, circle, or concentric construction. If the dual-channel contour resembles generic network branching, sync, or a stock tech symbol, reject this route and reselect the concept before adding decoration. This is a design judgment, not a claim of user-tested market uniqueness.
 
 ---
 
@@ -102,7 +102,7 @@ Abstract pictorial mark with geometric construction and negative-space intellige
 ### Shape construction
 The mark must have one primary mass and, at most, one supporting echo feature:
 - Primary mass: one compact, asymmetrical core whose continuous path intentionally branches into two distinct channels; use rounded edges only where they improve the geometry.
-- Core: one deliberate geometric anchor or negative-space core, optically balanced. An aperture-like void is optional and must remain subordinate.
+- Core: one deliberate geometric anchor and a broad, purposeful negative-space core, optically balanced. Do not use a literal eye, aperture, lens, circle, or concentric shape in the next generation.
 - Duplicate cue: the primary form itself splits into two offset, independently readable paths. Do not attach a generic window/card behind the mark as the duplication cue.
 - Negative space: large and coherent enough to survive reduction; no hairline gaps carrying essential meaning.
 - Silhouette: distinguishable even if all internal color details are erased.
@@ -137,6 +137,11 @@ Create one icon only. No grid, no multi-logo sheet, no device mockup, no labels,
 
 
 
+
+### Generation reset override — 2026-10-15
+
+The prompt QA council reviewed three prior images and rejected all of them for repeating anime-eye / faux-window / orbital-HUD clutter. For the next attempt, the latest council disposition supersedes any earlier optional eye/aperture language in this document: **no eye, aperture, iris, lens, circle, or concentric construction**. Use only the new, original split-core / dual-channel geometry. The form must be one bold asymmetrical mass with two broad internal negative-space lanes; avoid thin network-branch lines, nodes, arrows, and detached panels. No character, faux title bar, dialogs, orbital rings, stars, glitch fragments, HUD, wordmark, or extra panels. The design should win through silhouette and negative space, not lighting. This is a one-generation design constraint, not a claim that a generated image has passed testing.
+
 ## 5. Canonical master prompt for the image model
 
 Use the following as the primary generation prompt. Do not shorten away its core shape, anti-generic constraints, output context, or small-size requirements.
@@ -155,7 +160,7 @@ Use the following as the primary generation prompt. Do not shorten away its core
 >
 > Create a distinctive abstract pictorial mark based on a **forked-core / dual-channel** concept. Build one compact, asymmetrical core from a confident primary form. From that one core, one continuous path must deliberately separate into two offset, independently readable channels—an original path and a second instance path. This is the key visual idea: one context becoming two distinct instances. The fork/echo must be built into the main silhouette, not shown as a second generic card pasted behind it. Use a purposeful central negative space to anchor the geometry.
 >
-> An aperture/iris hint is optional and may exist only as subtle negative space; it must not make the mark read primarily as a camera lens, eye-tracking tool, or biometric scanner. Keep the symbol abstract: no literal eyeball, anime eye, face, camera-lens glyph, infinity symbol, or simple stack of windows. Favor an ownable silhouette and original shape relationships that could be described and redrawn by a human designer. Slight asymmetry is welcome when it measurably improves distinction.
+> Do not use an aperture, iris, lens, literal eye, circle, or concentric construction in this generation. The reference eye must not be carried into the symbol. Keep the mark abstract: no literal eyeball, anime eye, face, infinity symbol, networking nodes, arrows, or simple stack of windows. Favor an ownable silhouette whose broad negative-space geometry suggests two independently usable app contexts without reading as a network diagram. Slight asymmetry is welcome when it measurably improves distinction.
 >
 > The central idea must survive as a flat black silhouette. If the cyan color, shading, and tiny details were removed, viewers should still be able to distinguish the mark from a generic clone-app icon.
 >
