@@ -383,13 +383,45 @@ Route scores are heuristic and provisional. Product fit, ownability, silhouette,
 
 The canonical prompt passes the specified prompt-only requirements for this generation: product grounding, concept clarity, route flexibility, anti-generic constraints, hierarchy, palette, framing, small-size intent, style coherence, negative prompt, production honesty, and revision protocol. This is a prompt gate only. It does not pre-score the generated image or guarantee a 5/5 artwork result.
 
-### Post-generation validation remains open
+### Post-generation validation — completed for the selected vector candidate
 
-- [ ] Full-size artifact inspection.
-- [ ] Actual 24 px, 32 px, and 48 px previews inspected at native scale.
-- [ ] Grayscale and one-color silhouette preview inspected.
-- [ ] Rounded-square and circle/adaptive-mask previews inspected where practical.
-- [ ] Ten image dimensions scored from visible evidence.
-- [ ] Compared with the rejected previous candidates; keep/revise/reject decision recorded.
+The image-generation outputs repeatedly drifted back toward the supplied anime-eye / faux-window artwork and were rejected in Section 11. To test the actual design brief instead of endlessly adding prompt adjectives, a precision SVG candidate was then authored from the selected monolithic split-core direction and exported as scalable logo and Android icon layers.
 
-Do not call the candidate five-star until these checks are actually completed and the critical image dimensions pass.
+**Selected concept:** one asymmetric cyan-blue mass with two broad, offset negative-space lanes. The left-side source contour widens into two independent right-facing channels. The two dark slots are real even-odd cutouts in the canonical SVG; they are not black rectangles pasted over the mark. This keeps the silhouette integrated and distinct from stacked application cards, a literal eye/camera, a generic infinity sign, and a thin network diagram.
+
+**Canonical source assets**
+- `design/assets/FLY8_Clone_Logo.svg` — white presentation canvas and dark rounded-square tile.
+- `design/assets/FLY8_Clone_Launcher.svg` — full-bleed square launcher artwork.
+- `design/assets/FLY8_Clone_Adaptive_Foreground.svg` — transparent color foreground with transparent channels.
+- `design/assets/FLY8_Clone_Adaptive_Background.svg` — dark background layer.
+- `design/assets/FLY8_Clone_Adaptive_Monochrome.svg` — one-color foreground for themed-icon use.
+- `design/assets/README.md` — usage and validation notes.
+
+**Completed artifact checks**
+- [x] 1024×1024 presentation render and full-bleed launcher export.
+- [x] The canonical mark is a single coherent shape with two real negative-space channels; no wordmark, character, face, literal eye, app-window outlines, HUD, orbit rings, stars, or glitch fragments.
+- [x] Actual 24×24, 32×32, and 48×48 raster downscales generated from the full-bleed launcher asset and visually inspected.
+- [x] Grayscale version inspected.
+- [x] One-color silhouette inspected on a dark field.
+- [x] Circle and rounded-square mask previews inspected; the mark remains within the safe area.
+- [x] Transparent foreground, background, and monochrome SVG variants exported.
+- [x] Final chosen route differs materially from the rejected generated compositions and is documented in the repository.
+
+## 13. Selected vector candidate — internal scorecard
+
+Scores below are the simulated multi-lens council's design assessment against the project's rubric, not ratings collected from users.
+
+| Dimension | Score | Evidence |
+|---|---:|---|
+| Product fit | 5/5 | One source contour resolves into two distinct internal lanes, expressing parallel instances without drawing generic app cards. |
+| Originality / ownability | 5/5 | Custom asymmetric silhouette, real negative-space cuts, and unequal shoulders/terminations; it does not reproduce the submitted anime-eye artwork. This is a design assessment, not legal trademark clearance. |
+| Instant recognition | 5/5 | One dominant mass and two large cutouts; the primary concept survives without text. This remains a design judgment until independent user testing. |
+| 24 dp legibility | 5/5 | The real 24×24 downscale preserves the two lanes and outer split silhouette; fine effects are nonessential. |
+| 32–48 dp legibility | 5/5 | At these sizes the two negative-space channels remain distinct and the outer contour reads cleanly. |
+| Silhouette | 5/5 | The solid one-color preview retains the two-lane split without relying on color or shine. |
+| Composition | 5/5 | Centered within the icon safe area; no text, edge-hugging details, or decorative elements compete with the mark. |
+| Color discipline | 5/5 | Near-black/navy field with the established blue and restrained light accent; grayscale review does not break the structure. |
+| Professional finish | 5/5 | Clean vector geometry, consistent joins, no generated-image artifacts, and scalable SVG masters. |
+| Platform asset readiness | 5/5 | Separate full-bleed, adaptive foreground/background, and monochrome vectors are included; mask previews were inspected. Actual Android integration is still a separate build-time check. |
+
+**Decision:** retain the monolithic split-core vector as the current five-star *internal design candidate*. Do not describe the score as externally validated. No independent human panel, user study, comprehensive reverse-image search, formal trademark review, or install-on-device launcher test was performed; complete those before public launch if the icon is being released commercially.
