@@ -169,3 +169,35 @@ The user values original, polished, product-specific work and has explicitly rej
 - Image-model output is raster artwork unless a separate vector-production step creates an actual SVG. “Vector-like” describes visual style, not file format.
 - Do not claim 24/32/48 dp testing, grayscale export testing, adaptive-mask validation, or Android device testing unless those checks were actually performed. A conceptual review must be labelled as such.
 - A high aggregate rating cannot hide a critical failure in originality, product fit, silhouette, or small-size recognition.
+
+
+## Evidence and review integrity (required)
+
+Follow the expanded procedures in `design/FLY8-CLONE-LOGO-MASTER-PROMPT.md`, especially its calibrated rubric, prompt-integrity audit, critique passes, candidate ledger, and production validation.
+
+### Do not confuse a simulated council with independent validation
+- Use the brand strategist, logo designer, Android launcher specialist, color/production reviewer, and skeptical-user lenses as separate review passes.
+- If the same model/operator performs all passes, label the result a **simulated multi-lens council**. Claim an independent panel only when distinct human or model reviewers actually reviewed the candidate independently.
+- Keep the first-glance pass blind to the intended metaphor where practical. Require a contrarian pass that tries to reject the favored concept.
+- Persist actionable findings and evidence; do not expose hidden chain-of-thought.
+
+### Calibrated scoring
+Use the 1–5 anchors in the master prompt: 1 fails, 2 weak, 3 acceptable, 4 strong with a material weakness, 5 excellent with evidence and no material defect within the tests performed. Do not raise scores simply because the user requested five stars. Product fit, originality, 24 dp legibility, and silhouette are critical gates that cannot be hidden by a high average.
+
+Label claims as **observed**, **checked**, **inferred**, or **unknown**. If an icon has not actually been downscaled and inspected, its small-size legibility is not tested. If no user study was run, memorability is a design judgment rather than a measured user outcome.
+
+### Practical output checks
+When the actual image file and tools are available:
+1. Inspect the full-resolution candidate for artifacts, accidental text, unwanted elements, and geometric defects.
+2. Create and inspect 24 px, 32 px, and 48 px previews at actual display size.
+3. Check grayscale and a single-color silhouette.
+4. Test rounded-square and circular crops or adaptive-mask safe margins where practical.
+5. Compare each candidate against the current best at matched size and conditions.
+6. Record what was checked and what remains untested.
+
+Re-open the generated previews after export; a successful file write is not visual verification. If tools are unavailable, document the validation as pending rather than inventing a result.
+
+### Upstream reference integrity
+Relevant upstream sources include the [core UI/UX Pro Max skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md), [logo design workflow](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/design/references/logo-design.md), [logo style guide](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/design/references/logo-style-guide.md), [logo color psychology](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/design/references/logo-color-psychology.md), and [logo prompt engineering](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/design/references/logo-prompt-engineering.md).
+
+Read relevant guidance and verify it fits the product before using it. Do not claim an upstream CLI query, script run, or installation unless it actually happened. The FLY8-specific skill is informed by the upstream project; it is not a vendored copy.
