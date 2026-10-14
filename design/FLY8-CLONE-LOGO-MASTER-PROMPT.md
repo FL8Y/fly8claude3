@@ -81,6 +81,34 @@ If upstream search is not available, do not claim that the scripts returned a st
 
 ---
 
+## 3A. Concept-selection gate: challenge the default before committing
+
+The forked-aperture/echo-iris direction is a candidate, not a sacred choice. It has a real failure risk: if the aperture reads as a camera, biometric scanner, generic eye, or abstract tech swirl, it misses product identity. Before generation, compare at least these three materially different routes in writing:
+
+| Route | Visual logic | Main advantage | Main risk | Must pass |
+|---|---|---|---|---|
+| A. Forked aperture / echo iris | A compact aperture with a clearly integrated offset path that branches from one core into a second instance. | Connects the user's cyan-eye reference to the cloning idea without depicting a character. | Camera/biometric/eye cliché; can become literal or decorative. | The branch must be clearer than “eye” and still work without glow. |
+| B. FLY8 split-core sigil | A bespoke abstract glyph built around one anchor shape and two distinct internal paths/voids; it may subtly echo the rhythm of F/8 without becoming readable text. | Stronger potential for an ownable, brand-specific silhouette. | Forced monogram, unreadable pseudo-letter, or an arbitrary geometric mark. | Must look intentional with no typography and avoid merely drawing the numeral 8 or letter F. |
+| C. Parallel-path negative-space mark | One bold continuous form splits into two clear routes around a central void, symbolizing one context becoming two independent instances. No card or window outlines. | Communicates branching/parallelism with fewer conventional app-icon clichés. | Could feel like a generic split, loop, or connectivity mark. | The exact shape must be distinctive enough to recall FLY8, not just “technology.” |
+
+Score each route from 1–5 on **product-fit, ownability, silhouette, 24 dp potential, and reference compatibility**. Add one sentence of evidence per score and explicitly name the route's most serious cliché risk. Do not choose a route just because it matches the first idea or looks easiest to render.
+
+Choose the route with the strongest combined performance on product-fit, ownability, and silhouette; none of these three may be below 4/5 before generation. If every route fails, invent a fourth route and re-run the comparison once. If Route A wins but its eye/camera risk cannot be structurally controlled, reject A anyway.
+
+Do not cram routes A, B, and C into one icon. They are alternative design strategies, not pieces to combine. Once a route is selected, revise the canonical generation prompt so that its shape instructions match that route. **Never keep the aperture-specific prompt unchanged if a different route wins.**
+
+## 3B. Prompt audit passes before generation
+
+Run these checks in order and record only findings, decisions, and edits—not hidden private reasoning:
+
+1. **Completeness pass:** Does the prompt define the product, audience, meaning, output, tile/canvas, palette roles, shape hierarchy, scale constraints, and exclusions? Add any missing constraint.
+2. **Cliché pass:** Could the output plausibly belong to a cloud drive, camera, VPN, password manager, generic AI tool, or stock clone utility? Strengthen the unique shape logic or change the concept.
+3. **Conflict pass:** Are instructions pulling in incompatible directions (for example, “minimal” plus “many details,” “flat vector” plus “photorealistic glass,” or “one icon” plus “multiple panels”)? Resolve contradictions instead of stacking adjectives.
+4. **Downscale pass:** Identify all essential lines, cut-outs, gaps, and highlights. Remove or enlarge any detail that would not survive 24/32/48 dp.
+5. **Adversarial usefulness pass:** Ask a skeptical designer to make the strongest argument that this concept is not distinctive. Accept the criticism if evidence supports it; revise the concept, not just the wording.
+
+Only generate after all five passes have concrete completion notes. A long prompt is not automatically a good prompt: every sentence must constrain meaning, form, quality, or output. Remove repeated adjectives that do not change model behavior.
+
 ## 4. Selected visual language
 
 ### Recommended type
@@ -714,3 +742,19 @@ This is a role-based adversarial review written into the project specification, 
 - [ ] Actual 24/32/48 dp renders, grayscale exports, SVG conversion, and adaptive-icon mask tests have been performed. These are production checks, not things a prompt can certify.
 
 The prompt is ready for image generation. The artwork itself must still earn the rating.
+
+
+## 13. Asset separation and Android handoff
+
+The white-canvas image is a presentation proof, not automatically a shippable launcher asset. When the runtime supports image editing/cropping, prepare a clean export pass after the concept has been accepted:
+
+1. Preserve the white-canvas presentation image as the review board.
+2. Crop the centered dark icon tile precisely, removing all outer white margin, without altering the mark's proportions.
+3. Check the cropped square at 24, 32, 48, 72, 96, 144, and 192 pixels where practical; include at least one rounded-square or circular adaptive-mask preview if a reliable tool is available.
+4. Check the icon against black, gray, and white surrounding surfaces. The symbol must not rely on the white presentation canvas to appear complete.
+5. If the app implementation needs Android adaptive assets, prepare foreground and background layers separately only when the tool can do so cleanly. Keep safe-zone padding and verify that the foreground remains intact under common masks.
+6. Never label a raster concept image as a vector/SVG or fully production-ready adaptive icon unless that format/export actually exists.
+7. Record actual dimensions and formats. If these exports were not performed, say “concept preview only; asset extraction remains.”
+
+Do not distort the icon, over-sharpen it, add an arbitrary drop shadow, or redraw details during crop/export without another review. Asset preparation must preserve the accepted mark.
+
