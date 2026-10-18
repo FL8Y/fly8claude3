@@ -137,3 +137,20 @@ For each future session, append a dated entry under **Progress log**. Record the
 - Added this handoff and `v11_event_listener.lua`.
 - The listener has not yet been tested by the user in Delta.
 - Next: run v11, perform the cooldown retest, and bring back the copied logs.
+
+
+### 2026-10-19 — V24 log review and V25 auto-walk diagnostic
+- User ran V24 with LISTEN enabled and pressed FIRE twice.
+- First FIRE: distance was 25.57 studs; V24 correctly refused to send E because the character was outside its 8-stud threshold.
+- Observed event pair:
+  - `06:30:25 | EVENT Knocked | distance=8.35 | [1]=Workspace.Halloween.HouseForTrickOrTreating1.DoorOpener.1S_Door | [2]=3 | [3]=1792362653.796537`
+  - `06:30:26 | EVENT Landed | distance=8.02 | [1]=Workspace.Halloween.HouseForTrickOrTreating1.DoorOpener.1S_Door | [2]=36`
+- Second FIRE: distance was 22.43 studs; V24 again refused to send E.
+- Second observed event pair:
+  - `06:30:56 | EVENT Knocked | distance=4.76 | [1]=Workspace.Halloween.HouseForTrickOrTreating1.DoorOpener.1S_Door | [2]=4 | [3]=1792362684.845992`
+  - `06:30:57 | EVENT Landed | distance=22.79 | [1]=Workspace.Halloween.HouseForTrickOrTreating1.DoorOpener.1S_Door | [2]=202`
+- The two Knocked events were about 31 seconds apart, consistent with the reported cooldown but not enough to establish exact enforcement.
+- V24 FIRE was not a movement feature; it only checked distance and tried E if already close. This explains why the supplied log did not show FIRE initiating the door interaction.
+- Added `v25_auto_walk.lua`: larger V11-style floating panel, FIRE WALK attempts PathfindingService movement toward the door then E input, LISTEN captures full Knocked/Landed arguments, plus COPY LOG, STOP, minimize, close, and drag support.
+- V25 is not runtime-tested in Delta. Auto-walk may fail if client pathfinding cannot reach the target; E input may not be accepted by the game's custom interaction. No reward is claimed.
+- Next single step: run V25 in a fresh session, press FIRE WALK once, and share the full log. Do not run V24 and V25 together.
