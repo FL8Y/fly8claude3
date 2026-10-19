@@ -1,5 +1,6 @@
 -- NIGHTWATCH V148
--- Stable repeating route. Return to the original first door, then start the 30-second cooldown.
+-- Start the 30-second cooldown when the route first arrives at door 1.
+-- After visiting all doors, wait only for the remaining cooldown, then return to door 1.
 -- Arrival pause: 0.9 seconds per door. Includes an X close button.
 
 local Players = game:GetService("Players")
@@ -24,6 +25,7 @@ local lastLandedAt = {}
 local activeTween = nil
 local workerToken = 0
 local currentDoorIndex = 0
+local cycleCooldownDeadline = nil
 local route = nil
 local originalFirstDoor = nil
 
@@ -472,7 +474,8 @@ local function runCycle(token)
         end
 
         while running and token == workerToken do
-            -- Every cycle begins at the original first door after the cooldown.
+            -- The cooldown timer starts immediately upon arrival at the first door.
+            cycleCooldownDeadline = nil
             for index = 1, #route do
                 if not running or token ~= workerToken then
                     return
@@ -487,6 +490,10 @@ local function runCycle(token)
                     if not tweenToDoor(item, token) then
                         return
                     end
+                    if index == 1 then
+                        cycleCooldownDeadline = os.clock() + CYCLE_COOLDOWN
+                        updateUI("RUNNING  ·  30s cooldown started")
+                    end
                 end
             end
 
@@ -494,8 +501,23 @@ local function runCycle(token)
                 return
             end
 
-            -- Finish the route by returning to the exact original first door.
-            -- The 30-second cooldown begins only once we arrive there.
+            -- Count route time toward the cooldown that began at the first door.
+            if cycleCooldownDeadline then
+                while running and token == workerToken do
+                    local remaining = cycleCooldownDeadline - os.clock()
+                    if remaining <= 0 then
+                        break
+                    end
+                    updateUI(string.format("COOLDOWN  ·  %ds left", math.ceil(remaining)))
+                    task.wait(math.min(0.25, remaining))
+                end
+            end
+
+            if not running or token ~= workerToken then
+                return
+            end
+
+            -- Once the cooldown has expired, return to the exact original first door.
             if originalFirstDoor and originalFirstDoor.instance
                 and originalFirstDoor.instance.Parent then
                 progress.Text = "Returning to first door"
@@ -508,11 +530,7 @@ local function runCycle(token)
                 return
             end
 
-            progress.Text = "At first door  ·  cooldown"
-            if not waitCooldown(token) then
-                return
-            end
-
+            progress.Text = "At first door  ·  ready to repeat"
             currentDoorIndex = 0
         end
     end)
