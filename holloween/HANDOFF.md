@@ -154,3 +154,49 @@ For each future session, append a dated entry under **Progress log**. Record the
 - Added `v25_auto_walk.lua`: larger V11-style floating panel, FIRE WALK attempts PathfindingService movement toward the door then E input, LISTEN captures full Knocked/Landed arguments, plus COPY LOG, STOP, minimize, close, and drag support.
 - V25 is not runtime-tested in Delta. Auto-walk may fail if client pathfinding cannot reach the target; E input may not be accepted by the game's custom interaction. No reward is claimed.
 - Next single step: run V25 in a fresh session, press FIRE WALK once, and share the full log. Do not run V24 and V25 together.
+
+
+## Executive Council research update — 2026-10-19
+
+### Objective
+Find an evidence-based route to a finished stationary, one-button Halloween door interaction. Preserve existing observations; do not repeat broad scans that did not reveal the request path.
+
+### Repository review
+Reviewed `holloween/HANDOFF.md`, README, and open issue #2 in `FL8Y/fly8claude3`. Current tracked investigation files establish the runtime object paths and event observations, but GitHub code search within this repo found no `TrickOrTreatService`, `Knocked`, `Halloween`, `TrickOrTreatController`, or `RemoteEvent` source matches. The repository as inspected appears to contain diagnostics/handoff, not the authoritative game source needed to prove the trigger. Issue #2 already defines acceptance criteria and explicitly prohibits guessed remotes, simulated movement/input, or claims based solely on notifications.
+
+### New evidence from internet / official Roblox docs
+- Roblox documents `RemoteEvent.OnClientEvent` as server-to-client delivery and `FireServer` as client-to-server request. Therefore observing `Knocked` and `Landed` on the client does not make them valid client request endpoints; direction and semantics must be established from the handler. https://create.roblox.com/docs/reference/engine/classes/RemoteEvent
+- Roblox's client-server model identifies the server as the authoritative owner of game state. A locally observed notification is not authoritative reward verification. https://create.roblox.com/docs/projects/client-server
+- Roblox Studio's Developer Console has separate client/server logs; server logs are available to the game owner or group members with editing permission. This is the best low-friction check for accepted interactions and reward assignment, if source/permissions are available. https://create.roblox.com/docs/studio/developer-console
+- Studio supports breakpoints, watch values, call stack, and stepping; test server-side interaction and reward functions there instead of trying to infer server implementation from a client executor. https://create.roblox.com/docs/studio/debugging
+- Roblox's security documentation recommends validating interaction context, distance, player state, and rate limits server-side. This is consistent with the reported proximity/cooldown behavior but does not independently prove this game's exact constants. https://create.roblox.com/docs/scripting/security/client-server-boundary
+
+### Hypothesis — explicitly unverified
+Most likely flow: a custom client interaction handler detects the intended door/input or a custom door-specific handler; the server validates character/proximity/armed cooldown state; then the server triggers the `Knocked` and/or `Landed` client notifications and updates reward state. The variable numeric `Knocked` argument and `Landed` values are not understood. The existing timings (~1.6 s between paired notifications; some knocks ~31 s apart) are consistent with a reward-resolution window and a cooldown but do not prove either. These event pairs could be initiated by this player or another player unless the source ties them to the local player.
+
+### Viable routes ranked by probability / effort
+1. **Recover actual source (highest value).** Search all source branches, project backups, Studio place file, Rojo/Sourcemap/project files, and any original Claude-generated source. Search terms: `TrickOrTreatController`, `TrickOrTreatService`, `DoorOpenerScript`, `Knocked`, `Landed`, `TrickOrTreatHome`, `TrickOrTreatFront`, `HalloweenRewards`, and `EarnCandy`. This separates client input, server validation, door animation, and reward mutation.
+2. **Server-observed trace (if owner/edit access exists).** In a private Studio test session, enable separate Server and Client logs, place breakpoints/logpoints on the source-backed interaction and reward handler, and record: local UserId, target door, accepted/rejected reason, cooldown deadline, event emission, and inventory/currency before/after. Use one manual interaction baseline, then one candidate button action. Do not modify live public-game behavior.
+3. **Client call-flow inspection from recovered client source.** Trace UI/input to the first local controller/function, then identify the actual client-to-server remote or server-invoked function from source. Don't infer endpoint from event names or the argument layout of incoming events.
+4. **Black-box correlation only as fallback.** With the existing listener, record the exact manual input time, which player interacted, door state, reward balance before/after, and event args. Test one interaction, then wait past cooldown before the next; do not interleave players/actions. This can narrow timing but cannot discover hidden server source or prove causal ownership on its own.
+5. **Stop/avoid low-yield avenues.** Do not repeat full `getgc` scans, brute-force remote payloads, invoke `EarnCandy`/reward APIs, fire incoming notification remotes, use `firesignal` as a server request, or retry pathfinding/simulated input. These do not establish the intended request path and prior movement/input automation reportedly caused a kick.
+
+### Finished product definition
+The product is complete only when all gates pass:
+- Source-backed entry point is referenced by file/function or an authoritative API contract.
+- One FIRE action invokes that supported path only, with no movement/teleport/keypress simulation and no guessed payload.
+- State machine distinguishes `READY`, `REQUESTED`, `ACCEPTED`, `COOLDOWN`, `REJECTED`, and `REWARD VERIFIED`; client notifications alone cannot set `REWARD VERIFIED`.
+- One successful test confirms server-accepted interaction and an actual authoritative currency/inventory delta.
+- One cooldown test verifies no duplicate reward, and one rejection/error test reports honestly.
+- UI cleanup and listener teardown work; COPY preserves the current evidence log.
+- Test notes and limitations are written back to this handoff.
+
+### Blocking fact
+The source path remains unidentified. A reliable FIRE implementation cannot be responsibly completed from the currently inspected evidence. The next highest-value input is the source/project itself (place file or original code containing the named modules/server handler), or a permitted Studio server trace. This is an evidence dependency, not a UI or scripting problem.
+
+### Progress log — 2026-10-19 — Executive Council external research
+- Reviewed the current handoff and issue #2 directly from GitHub.
+- Searched the repository for the central event/service identifiers; no source matches were returned.
+- Searched GitHub/public web for the exact game-specific symbols; no authoritative matching implementation was found. Unrelated games or generic exploit scripts were excluded as non-evidence.
+- Consulted current official Roblox docs for RemoteEvent direction, client-server authority, Studio server/client logs, debugging, and interaction security.
+- Decision: continue with source recovery / owner-authorized server tracing. Do not produce an invented FIRE trigger.
