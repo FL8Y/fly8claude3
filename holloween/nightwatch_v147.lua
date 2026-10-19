@@ -1,7 +1,6 @@
--- NIGHTWATCH V147
--- Stable repeating route, 30-second cooldown, cleaner draggable UI.
--- Cycle: visit every route door -> wait 30s -> return to original first door -> repeat.
--- Arrival pause: 0.9 seconds per door. No automatic log copying.
+-- NIGHTWATCH V148
+-- Stable repeating route. Return to the original first door, then start the 30-second cooldown.
+-- Arrival pause: 0.9 seconds per door. Includes an X close button.
 
 local Players = game:GetService("Players")
 local CollectionService = game:GetService("CollectionService")
@@ -244,7 +243,7 @@ end
 
 -- UI
 local gui = Instance.new("ScreenGui")
-gui.Name = "NightwatchV147"
+gui.Name = "NightwatchV148"
 gui.ResetOnSpawn = false
 gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -292,15 +291,33 @@ topFill.BorderSizePixel = 0
 topFill.Parent = topBar
 
 local title = Instance.new("TextLabel")
-title.Size = UDim2.new(1, -20, 1, 0)
+title.Size = UDim2.new(1, -52, 1, 0)
 title.Position = UDim2.fromOffset(12, 0)
 title.BackgroundTransparency = 1
-title.Text = "NIGHTWATCH  /  V147"
+title.Text = "NIGHTWATCH  /  V148"
 title.TextColor3 = Color3.fromRGB(237, 243, 252)
 title.TextSize = 14
 title.Font = Enum.Font.GothamBold
 title.TextXAlignment = Enum.TextXAlignment.Left
 title.Parent = topBar
+
+local closeButton = Instance.new("TextButton")
+closeButton.Name = "Close"
+closeButton.Size = UDim2.fromOffset(30, 30)
+closeButton.Position = UDim2.new(1, -36, 0, 6)
+closeButton.BackgroundColor3 = Color3.fromRGB(166, 58, 69)
+closeButton.BorderSizePixel = 0
+closeButton.Text = "X"
+closeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+closeButton.TextSize = 14
+closeButton.Font = Enum.Font.GothamBold
+closeButton.AutoButtonColor = true
+closeButton.ZIndex = 2
+closeButton.Parent = topBar
+
+local closeCorner = Instance.new("UICorner")
+closeCorner.CornerRadius = UDim.new(0, 8)
+closeCorner.Parent = closeButton
 
 local statusDot = Instance.new("Frame")
 statusDot.Size = UDim2.fromOffset(8, 8)
@@ -397,6 +414,12 @@ UserInputService.InputEnded:Connect(function(input)
     end
 end)
 
+closeButton.Activated:Connect(function()
+    if gui and gui.Parent then
+        gui:Destroy()
+    end
+end)
+
 local function updateUI(message)
     if running then
         statusDot.BackgroundColor3 = Color3.fromRGB(85, 220, 148)
@@ -448,10 +471,9 @@ local function runCycle(token)
             return
         end
 
-        local startIndex = currentDoorIndex == 0 and 1 or 2
-
         while running and token == workerToken do
-            for index = startIndex, #route do
+            -- Every cycle begins at the original first door after the cooldown.
+            for index = 1, #route do
                 if not running or token ~= workerToken then
                     return
                 end
@@ -472,17 +494,8 @@ local function runCycle(token)
                 return
             end
 
-            -- Cooldown starts after the last door, before returning to door one.
-            progress.Text = "Route complete  ·  cooldown"
-            if not waitCooldown(token) then
-                return
-            end
-
-            if not running or token ~= workerToken then
-                return
-            end
-
-            -- Return to the exact first door chosen at the beginning.
+            -- Finish the route by returning to the exact original first door.
+            -- The 30-second cooldown begins only once we arrive there.
             if originalFirstDoor and originalFirstDoor.instance
                 and originalFirstDoor.instance.Parent then
                 progress.Text = "Returning to first door"
@@ -491,10 +504,16 @@ local function runCycle(token)
                 end
             end
 
-            -- On later cycles, the first door is the return point; continue at door two
-            -- to avoid knocking at door one twice in a row.
-            startIndex = 2
-            currentDoorIndex = 1
+            if not running or token ~= workerToken then
+                return
+            end
+
+            progress.Text = "At first door  ·  cooldown"
+            if not waitCooldown(token) then
+                return
+            end
+
+            currentDoorIndex = 0
         end
     end)
 
