@@ -21,6 +21,7 @@ local running = false
 local destroyed = false
 local eventConnections = {}
 local lastKnockedAt = {}
+local knockedCounts = {}
 local lastLandedAt = {}
 local activeTween = nil
 local workerToken = 0
@@ -103,6 +104,7 @@ local function attachEventListeners()
             local args = {...}
             local name = tostring(args[1] or "unknown")
             lastKnockedAt[name] = os.clock()
+            knockedCounts[name] = (knockedCounts[name] or 0) + 1
         end))
 
         table.insert(eventConnections, landed.OnClientEvent:Connect(function(...)
@@ -172,6 +174,8 @@ local function tweenToDoor(item, token)
     end
 
     local door = item.instance
+    local doorName = door and door.Name or "unknown"
+    local knockedCountBeforeApproach = knockedCounts[doorName] or 0
     local _, root, humanoid = getCharacter()
 
     if not running or token ~= workerToken then
@@ -239,8 +243,16 @@ local function tweenToDoor(item, token)
         return false
     end
 
-    task.wait(PAUSE_AT_DOOR)
-    return running and token == workerToken
+    -- Advance only after this door emits a new Knocked notification.
+    -- Capture the count before tweening so a notification during arrival is not missed.
+    updateUI("WAITING  ·  Knocked: " .. doorName)
+    while running and token == workerToken do
+        if (knockedCounts[doorName] or 0) > knockedCountBeforeApproach then
+            return true
+        end
+        task.wait(0.05)
+    end
+    return false
 end
 
 -- UI
@@ -373,7 +385,7 @@ local footer = Instance.new("TextLabel")
 footer.Size = UDim2.new(1, -24, 0, 18)
 footer.Position = UDim2.fromOffset(12, 145)
 footer.BackgroundTransparency = 1
-footer.Text = "30s cooldown   •   0.9s per door"
+footer.Text = "30s cooldown   •   wait for Knocked"
 footer.TextColor3 = Color3.fromRGB(117, 131, 151)
 footer.TextSize = 10
 footer.Font = Enum.Font.Gotham
