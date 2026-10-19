@@ -200,3 +200,63 @@ The source path remains unidentified. A reliable FIRE implementation cannot be r
 - Searched GitHub/public web for the exact game-specific symbols; no authoritative matching implementation was found. Unrelated games or generic exploit scripts were excluded as non-evidence.
 - Consulted current official Roblox docs for RemoteEvent direction, client-server authority, Studio server/client logs, debugging, and interaction security.
 - Decision: continue with source recovery / owner-authorized server tracing. Do not produce an invented FIRE trigger.
+
+### Progress log — 2026-10-19 — V129 live log reviewed; V130 monitor reviewed; source-recovery context clarified
+
+#### User context / continuity requirement
+- User explained that Claude may have the game source or relevant work in another session, but they have run out of Claude tokens and cannot ask that session where it was saved. They describe themselves as a vibe coder and say each Claude session starts fresh.
+- Do not assume that “the user owns the game” means the actual source is available in this repository. The user says Claude “has it,” but its location is unknown. Treat source recovery as the immediate blocker and help search existing project artifacts before asking the user to recreate work.
+- The repository is `FL8Y/fly8claude3`; the existing investigation folder is `holloween/`. Its current tracked files include `HANDOFF.md` and scripts through `v30_manual_outcome_tracker.lua`. This repository listing did not show V129/V130 or the actual Roblox game modules. The handoff must remain the continuity anchor across sessions.
+
+#### New V129 runtime evidence supplied in chat
+User supplied this log (summarized faithfully):
+- At 09:58:24 V129 loaded; six controls ready; server-side eligibility monitor enabled. It explicitly stated FIRE was diagnostic only and no verified client trigger had been found.
+- At 09:58:24 nearest-door estimate was NOT IN RANGE: 43.84 studs, configured range 14, vertical delta 2.09.
+- At 09:58:31 listening to `Knocked` and `Landed` started.
+- At 09:58:34 FIRE was pressed at target `Workspace.Halloween.HouseForTrickOrTreating1.DoorOpener.1S_Door`, horizontal distance 16.62. Log explicitly says no verified client knock request exists and FIRE did not send a request.
+- At 09:58:41 the eligibility monitor reported IN RANGE at 13.82 studs, vertical delta 2.12.
+- At 09:58:41 a real `Knocked` notification arrived for the target, with client-visible arguments `[1] 1S_Door`, `[2] 2`, `[3] 1792375150.150353`.
+- At 09:58:43 a `Landed` notification arrived for the same target with client-visible arguments `[1] 1S_Door`, `[2] 21`. The log reported a same-path interval of 1.627 seconds and explicitly noted that the candy display value was not independently verified against the balance.
+- FIRE was pressed repeatedly at 09:58:47, 09:59:12, 09:59:13, 09:59:14, 09:59:16; each press only logged diagnostics and did not send a request. Listening was stopped at 09:59:18.
+
+#### Evidence-based interpretation
+- The monitor observed a `Knocked`/`Landed` event pair after the player’s estimated distance became 13.82 studs, within the reported 14-stud range. This is consistent with the supplied decompiled server source’s automatic proximity loop triggering an interaction when eligibility conditions are met.
+- This does not establish that the distance change alone caused the event, nor does it prove a one-button trigger. FIRE did not cause the event: its own logs state it sent no request.
+- Later FIRE presses at 11.92 studs did not produce a logged event in the supplied excerpt. Cooldown/unarmed door state is a plausible explanation based on the supplied server source, but it is not independently proven by that log alone.
+- The `Landed` value `21` is the value delivered to the client as a candy/reward display amount. The actual account balance or inventory delta remains unverified.
+- A prior assistant response correctly identified the source-level blocker but should not repeatedly produce a new monitor-only script as if that advances implementation.
+
+#### V130 reviewed
+- V130 is a draggable dark/orange six-control client monitor: LISTEN, FIRE, COPY, CLEAR LOG, STOP LISTEN, INFO/HANDOFF, plus close.
+- It scans for a nearest door, estimates horizontal/vertical range and reads `TrickOrTreatReadyAt`; it listens for `Knocked` and `Landed`.
+- Its FIRE callback is explicitly diagnostic-only. It does not send a request and logs that no verified client trigger exists.
+- Technical caveat to check if V130 is reused: its assumed event hierarchy `ReplicatedStorage.Network.TrickOrTreatService.RE` and door-discovery filter should be confirmed against the actual runtime tree; the source snippets and prior scripts have used varying hierarchy assumptions. Avoid presenting estimated client attributes as authoritative server acceptance.
+- No V131 implementation should be another UI-only variant. First search for and locate the game source that Claude reportedly has, or identify the project/place file containing `TrickOrTreatController` and `TrickOrTreatService`.
+
+#### Recovered decompiled source details supplied in chat
+The user pasted decompiled source for:
+- Client module: `ReplicatedStorage.Framework.Features.Halloween.TrickOrTreatController`
+- Server module: `ReplicatedStorage.Framework.Features.Halloween.TrickOrTreatService`
+
+Based on the pasted excerpts:
+- Client code obtains a `ClientComm` for `TrickOrTreatService` and subscribes to server-to-client `Knocked` and `Landed` signals. The client handlers animate/show outcomes and reward UI; they are not themselves a request endpoint.
+- Server code creates `Knocked` and `Landed` signals, then runs an automatic periodic eligibility check for players and doors. The pasted server logic checks the player’s character root, loaded state, horizontal range (door model `Range` attribute or default 14), vertical difference (<20), cooldown/armed state, minimum interval between knocks, and travel speed. When eligible it invokes its internal `trickOrTreat(player, doorState)` routine, emits `Knocked`, later grants candy/reward, and emits `Landed`.
+- The pasted service did not show a client-callable knock request/function. The actual normal interaction/input handler is still missing from the evidence currently stored in the GitHub repository.
+- Treat these details as based on user-provided decompiled source, not independently re-fetched original source. Do not invent a remote endpoint or try to call the internal server function from a client executor.
+
+#### Next action — source recovery, not another diagnostic script
+1. Inspect the rest of the repository and the user’s existing Claude-generated artifacts/branches/commits for any place file, Rojo project, Studio source export, scripts folder, or code containing `TrickOrTreatController`, `TrickOrTreatService`, `DoorOpenerScript`, `HalloweenRewards`, or `EarnCandy`. Existing repo contents currently show investigation scripts, not the actual game source.
+2. If nothing is present, identify likely storage locations for the original project/source in the user’s existing workflow and give the user the smallest practical way to surface it (for example, a repository tree or relevant file path), rather than asking them to restate the technical investigation.
+3. Once source is located, trace the actual client input handler and server acceptance/reward path from source. If user has authorized Studio access, prefer a private test session with server-side instrumentation.
+4. Implement a one-button action only if the source reveals a legitimate supported interaction path. Validate it with a real server-accepted interaction and authoritative currency/inventory delta.
+5. Record the result in this file with evidence and do not overwrite previous progress entries.
+
+#### Current status after V129/V130
+- Correct target and two notification signals: confirmed.
+- V129 monitor detected an event pair after an in-range estimate: confirmed.
+- V129 FIRE sent a knock request: **false; it sent no request**.
+- V130 is a monitoring UI, not a working interaction trigger.
+- Automatic server-side proximity/cooldown logic: supported by user-pasted decompiled server source.
+- Actual client input/interaction handler in the tracked repository: still not found.
+- Actual reward balance change for the V129 `Landed = 21` event: not independently verified.
+- Main blocker: locate the source Claude reportedly has; do not restart investigation or create another monitor-only version.
